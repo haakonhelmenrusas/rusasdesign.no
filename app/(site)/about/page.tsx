@@ -1,8 +1,9 @@
+import { PortableText } from '@portabletext/react';
+import { BiEnvelope } from 'react-icons/bi';
+
 import WorkExperience from '@/app/(site)/components/WorkExperience';
 import { getProfile } from '@/sanity/query';
 import type { ProfileType } from '@/types';
-import { PortableText } from '@portabletext/react';
-import { BiEnvelope } from 'react-icons/bi';
 import ProfilePhoto from '../components/profilePhoto/ProfilePhoto';
 
 export default async function About() {
@@ -11,27 +12,27 @@ export default async function About() {
 	return (
 		<main className='lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6'>
 			{profile &&
-				profile.map((data) => (
-					<div key={data._id}>
-						<section className='grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center'>
-							<div className='order-2 lg:order-none'>
+				profile.map((profile) => (
+					<div key={profile._id}>
+						<section>
+							<div>
 								<h1 className='lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8'>
-									I&apos;m {data.fullName}. I work in {data.location}, where I design the future.
+									I&apos;m {profile.fullName}. I work in {profile.location}, where I design the future.
 								</h1>
 								<div className='flex flex-col gap-y-3 text-zinc-400 leading-relaxed'>
-									<PortableText value={data.fullBio} />
+									<PortableText value={profile.fullBio} />
 								</div>
 							</div>
 							<div className='flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12'>
-								<ProfilePhoto image={data.profileImage.image} alt={data.profileImage.alt} />
+								<ProfilePhoto image={profile.profileImage.image} alt={profile.profileImage.alt} />
 								<ul>
 									<li>
 										<a
-											href={`mailto:${data.email}`}
+											href={`mailto:${profile.email}`}
 											className='flex items-center gap-x-2 hover:text-purple-400 duration-300'
 										>
 											<BiEnvelope className='text-lg' />
-											{data.email}
+											{profile.email}
 										</a>
 									</li>
 								</ul>
@@ -43,7 +44,7 @@ export default async function About() {
 								I&apos;ve spent few years working on my skills. In no particular order, here are a few of them.
 							</p>
 							<ul className='flex flex-wrap items-center gap-3 mt-8'>
-								{data.skills.map((skill, id) => (
+								{profile.skills.map((skill, id) => (
 									<li
 										key={id}
 										className='bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md px-2 py-1'
