@@ -1,7 +1,7 @@
 import { PortableText } from '@portabletext/react';
 import { BiEnvelope } from 'react-icons/bi';
 
-import WorkExperience from '@/app/(site)/components/WorkExperience';
+import WorkExperience from '@/app/(site)/components/workExperience/WorkExperience';
 import { getProfile } from '@/sanity/query';
 import type { ProfileType } from '@/types';
 import ProfilePhoto from '../components/profilePhoto/ProfilePhoto';
