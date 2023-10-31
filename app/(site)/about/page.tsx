@@ -2,8 +2,8 @@ import WorkExperience from '@/app/(site)/components/WorkExperience';
 import { getProfile } from '@/sanity/query';
 import type { ProfileType } from '@/types';
 import { PortableText } from '@portabletext/react';
-import Image from 'next/image';
 import { BiEnvelope } from 'react-icons/bi';
+import ProfilePhoto from '../components/profilePhoto/ProfilePhoto';
 
 export default async function About() {
 	const profile: ProfileType[] = await getProfile();
@@ -18,22 +18,12 @@ export default async function About() {
 								<h1 className='lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8'>
 									I&apos;m {data.fullName}. I work in {data.location}, where I design the future.
 								</h1>
-
 								<div className='flex flex-col gap-y-3 text-zinc-400 leading-relaxed'>
 									<PortableText value={data.fullBio} />
 								</div>
 							</div>
 							<div className='flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12'>
-								<div>
-									<Image
-										className='rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]'
-										src={data.profileImage.image}
-										width={400}
-										height={400}
-										quality={100}
-										alt={data.profileImage.alt}
-									/>
-								</div>
+								<ProfilePhoto image={data.profileImage.image} alt={data.profileImage.alt} />
 								<ul>
 									<li>
 										<a
