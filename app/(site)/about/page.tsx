@@ -1,4 +1,4 @@
-import WorkExperience from '@/components/WorkExperience';
+import WorkExperience from '@/app/(site)/components/WorkExperience';
 import { getProfile } from '@/sanity/query';
 import type { ProfileType } from '@/types';
 import { PortableText } from '@portabletext/react';
