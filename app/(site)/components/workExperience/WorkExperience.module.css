@@ -6,16 +6,19 @@
 }
 .work_experience {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	gap: 16px;
 }
 .work_experience_card {
 	display: flex;
 	flex-direction: column;
+	width: 432px;
+	height: 132px;
 	gap: 16px;
 	padding: 16px;
-	border-radius: 8px;
-	box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 12px;
+	box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.1);
 }
 .header {
 	display: flex;
@@ -25,6 +28,8 @@
 .logo {
 	border-radius: 8px;
 	padding: 8px;
+	width: 64px;
+	height: 64px;
 	background-color: black;
 }
 .work_name {
