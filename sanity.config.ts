@@ -1,5 +1,4 @@
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
 import { dataset, projectId } from './env';
 import { schemaTypes } from './schemas';
 
@@ -9,7 +8,7 @@ export default defineConfig({
 	basePath: '/studio',
 	projectId: projectId,
 	dataset: dataset,
-	plugins: [deskTool()],
+	plugins: [],
 	schema: {
 		types: schemaTypes,
 	},
