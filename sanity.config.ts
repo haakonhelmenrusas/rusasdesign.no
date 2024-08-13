@@ -4,7 +4,7 @@ import { schemaTypes } from "./schemas";
 
 export default defineConfig({
   name: "default",
-  title: "My Place",
+  title: "Rusås Design",
   basePath: "/studio",
   projectId: projectId,
   dataset: dataset,
