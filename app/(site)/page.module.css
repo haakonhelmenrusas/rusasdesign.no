@@ -1,0 +1,32 @@
+.main {
+    margin: 0;
+    background-image: url(../../public/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .viewport {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text_box {
+    height: auto;
+    width: auto;
+    margin: 1vh;
+    padding: 1vh;
+    background-color: rgb(142, 143, 180);
+    border-radius: 1vh;
+    border: 0.25vh solid #808080;
+  }
+  
+  .title {
+    font-size: 6vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 1vh;
+  }
+  
