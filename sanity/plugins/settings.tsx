@@ -1,7 +1,3 @@
-/**
- * This plugin contains all the logic for setting up the singletons
- */
-
 import { definePlugin, type DocumentDefinition } from 'sanity';
 import { type StructureResolver } from 'sanity/structure';
 

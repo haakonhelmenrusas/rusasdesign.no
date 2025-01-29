@@ -83,9 +83,6 @@ export default defineType({
       description: 'Displayed on social cards and search engine results.',
       options: {
         hotspot: true,
-        aiAssist: {
-          imageDescriptionField: 'alt',
-        },
       },
       fields: [
         defineField({

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/heroPost/HeroPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="feat: full reset and restructure of the project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(sanity)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(sanity)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/plugins/assist.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/plugins/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/plugins/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemas/singletons/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/singletons/settings.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +137,7 @@
       <workItem from="1736255882114" duration="4115000" />
       <workItem from="1738061842990" duration="10091000" />
       <workItem from="1738145578033" duration="500000" />
-      <workItem from="1738146171451" duration="4320000" />
+      <workItem from="1738146171451" duration="5049000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -192,7 +195,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1738145333791</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="feat: full reset and restructure of the project">
+      <option name="closed" value="true" />
+      <created>1738160444503</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1738160444503</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +240,7 @@
     <MESSAGE value="fix: clean up" />
     <MESSAGE value="ci: upgrade packages" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="feat: full reset and restructure of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: full reset and restructure of the project" />
   </component>
 </project>
