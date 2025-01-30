@@ -1,31 +1,31 @@
-import {Image} from "next-sanity/image";
+import { Image } from 'next-sanity/image';
 
-import {urlForImage} from "@/sanity/lib/utils";
+import { urlForImage } from '@/sanity/lib/utils';
 
 interface CoverImageProps {
-	image: any;
-	priority?: boolean;
+  image: any;
+  priority?: boolean;
 }
 
 export default function CoverImage(props: CoverImageProps) {
-	const {image: source, priority} = props;
-	const image = source?.asset?._ref ? (
-			<Image
-					className="h-auto w-full"
-					width={1000}
-					height={500}
-					alt={source?.alt || ""}
-					src={urlForImage(source)?.height(500).width(1000).url() as string}
-					sizes="100vw"
-					priority={priority}
-			/>
-	) : (
-			<div className="bg-slate-50" style={{paddingTop: "50%"}}/>
-	);
+  const { image: source, priority } = props;
+  const image = source?.asset?._ref ? (
+    <Image
+      className="h-auto"
+      width={500}
+      height={250}
+      alt={source?.alt || ''}
+      src={urlForImage(source)?.height(250).width(500).url() as string}
+      sizes="100vw"
+      priority={priority}
+    />
+  ) : (
+    <div className="bg-slate-50" style={{ paddingTop: '20%' }} />
+  );
 
-	return (
-			<div className="shadow-md transition-shadow duration-200 group-hover:shadow-lg sm:mx-0">
-				{image}
-			</div>
-	);
+  return (
+    <div className="shadow-md transition-shadow duration-200 group-hover:shadow-lg sm:mx-0">
+      {image}
+    </div>
+  );
 }

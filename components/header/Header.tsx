@@ -6,10 +6,10 @@ export default function Header(props: { title: string | null | undefined; descri
     && props.description;
   return (
     <header className="mt-16 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
-      <h1 className="text-balance text-2xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-6xl">
+      <h1 className="text-balance text-2xl font-medium leading-tight tracking-tighter lg:pr-8 lg:text-6xl">
         {title || ''}
       </h1>
-      <h2 className="text-pretty mt-5 text-center text-lg lg:pl-8 lg:text-left">
+      <h2 className="text-center text-lg lg:pl-8 lg:text-left">
         <PortableText
           className="prose-lg"
           value={description?.length ? description : ''}

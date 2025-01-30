@@ -40,34 +40,6 @@ export default defineType({
       type: 'text',
     }),
     defineField({
-      name: 'coverImage',
-      title: 'Cover Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-        aiAssist: {
-          imageDescriptionField: 'alt',
-        },
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-          description: 'Important for SEO and accessiblity.',
-          validation: (rule) => {
-            return rule.custom((alt, context) => {
-              if ((context.document?.coverImage as any)?.asset?._ref && !alt) {
-                return 'Required';
-              }
-              return true;
-            });
-          },
-        },
-      ],
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'date',
       title: 'Date',
       type: 'datetime',
@@ -78,6 +50,12 @@ export default defineType({
       title: 'Author',
       type: 'reference',
       to: [{ type: authorType.name }],
+    }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: [{ 'type': 'category' }],
     }),
   ],
   preview: {

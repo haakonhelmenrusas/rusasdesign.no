@@ -32,3 +32,13 @@ export const postQuery = defineQuery(`
     ${postFields}
   }
 `);
+
+export const categoryQuery = defineQuery(`
+  *[_type == "category" && slug.current == $slug] {
+    _id,
+    title,
+    "posts": *[_type == "post" && references(^._id)] {
+      ${postFields}
+    }
+  } [0]
+`);
