@@ -56,7 +56,7 @@ export default async function RootLayout({ children }: { children: ReactNode; })
     <html lang="no" className={`${inter.variable} bg-gray-200 text-black h-full`}>
     <body className="min-h-screen flex flex-col">
     {isDraftMode && <AlertBanner />}
-    <main className="flex-grow">{children}</main>
+    <main className="grow">{children}</main>
     <Footer footer={footer} />
     {isDraftMode && <VisualEditing />}
     </body>
