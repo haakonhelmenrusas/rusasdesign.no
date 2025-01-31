@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Avatar, CoverImage, DateComponent } from '@/components';
+import { Avatar, DateComponent } from '@/components';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { moreStoriesQuery } from '@/sanity/lib/queries';
 
@@ -13,12 +13,9 @@ export default async function MoreStories(params: {
     <>
       <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
         {data?.map((post) => {
-          const { _id, title, slug, coverImage, excerpt, author } = post;
+          const { _id, title, slug, excerpt, author } = post;
           return (
-            <article key={_id} className="shadow">
-              <Link href={`/posts/${slug}`} className="group mb-5 block">
-                <CoverImage image={coverImage} priority={false} />
-              </Link>
+            <article key={_id} className="shadow p-8 bg-gray-100 rounded-lg">
               <h3 className="text-balance mb-3 text-3xl leading-snug">
                 <Link href={`/posts/${slug}`} className="hover:underline">
                   {title}

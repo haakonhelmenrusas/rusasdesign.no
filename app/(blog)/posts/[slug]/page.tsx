@@ -1,13 +1,12 @@
 import { defineQuery, type PortableTextBlock } from 'next-sanity';
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { postQuery, settingsQuery } from '@/sanity/lib/queries';
-import { resolveOpenGraphImage } from '@/sanity/lib/utils';
-import { Avatar, CoverImage, DateComponent, MoreStories, PortableText } from '@/components';
+import { Avatar, DateComponent, MoreStories, PortableText } from '@/components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -25,22 +24,17 @@ export async function generateStaticParams() {
   });
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await sanityFetch({
     query: postQuery,
     params,
     stega: false,
   });
-  const previousImages = (await parent).openGraph?.images || [];
-  const ogImage = resolveOpenGraphImage(post?.coverImage);
 
   return {
     authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
     title: post?.title,
     description: post?.excerpt,
-    openGraph: {
-      images: ogImage ? [ogImage, ...previousImages] : previousImages,
-    },
   } satisfies Metadata;
 }
 
@@ -70,9 +64,6 @@ export default async function PostPage({ params }: Props) {
           {post.author && (
             <Avatar name={post.author.name} picture={post.author.picture} />
           )}
-        </div>
-        <div className="mb-8 sm:mx-0 md:mb-16">
-          <CoverImage image={post.coverImage} priority />
         </div>
         <div className="mx-auto max-w-2xl">
           <div className="mb-6 block md:hidden">

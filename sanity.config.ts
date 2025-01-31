@@ -26,9 +26,7 @@ export default defineConfig({
   dataset,
   schema: {
     types: [
-      // Singletons
       settings,
-      // Documents
       post,
       author,
       category,
@@ -71,8 +69,6 @@ export default defineConfig({
     structureTool({ structure: pageStructure([settings]) }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
     singletonPlugin([settings.name]),
-    // Vision lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
     process.env.NODE_ENV === 'development' &&
     visionTool({ defaultApiVersion: apiVersion }),
   ].filter(Boolean) as PluginOptions[],

@@ -8,7 +8,6 @@ const postFields = /* groq */ `
   "title": coalesce(title, "Untitled"),
   "slug": slug.current,
   excerpt,
-  coverImage,
   "date": coalesce(date, _updatedAt),
   "author": author->{"name": coalesce(name, "Anonymous"), picture},
 `;
@@ -22,6 +21,12 @@ export const heroQuery = defineQuery(`
 
 export const moreStoriesQuery = defineQuery(`
   *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {
+    ${postFields}
+  }
+`);
+
+export const postsQuery = defineQuery(`
+  *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {
     ${postFields}
   }
 `);

@@ -1,11 +1,11 @@
 import '../globals.css';
 
 import type { Metadata } from 'next';
-import { type PortableTextBlock, toPlainText, VisualEditing } from 'next-sanity';
+import { toPlainText, VisualEditing } from 'next-sanity';
 import { Inter } from 'next/font/google';
 import { draftMode } from 'next/headers';
 
-import { AlertBanner, PortableText } from '@/components/';
+import { AlertBanner, Footer } from '@/components/';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { settingsQuery } from '@/sanity/lib/queries';
 import { resolveOpenGraphImage } from '@/sanity/lib/utils';
@@ -53,22 +53,11 @@ export default async function RootLayout({ children }: { children: ReactNode; })
   const { isEnabled: isDraftMode } = await draftMode();
 
   return (
-    <html lang="no" className={`${inter.variable} bg-white text-black`}>
-    <body>
-    <section className="min-h-screen">
-      {isDraftMode && <AlertBanner />}
-      <main>{children}</main>
-      <footer className="bg-accent-1 border-accent-2 border-t">
-        <div className="container mx-auto px-5">
-          {footer.length > 0 ? (
-            <PortableText
-              className="prose-sm text-pretty bottom-0 w-full max-w-none bg-white py-6 text-center md:py-20"
-              value={footer as PortableTextBlock[]}
-            />
-          ) : null}
-        </div>
-      </footer>
-    </section>
+    <html lang="no" className={`${inter.variable} bg-gray-200 text-black h-full`}>
+    <body className="min-h-screen flex flex-col">
+    {isDraftMode && <AlertBanner />}
+    <main className="flex-grow">{children}</main>
+    <Footer footer={footer} />
     {isDraftMode && <VisualEditing />}
     </body>
     </html>

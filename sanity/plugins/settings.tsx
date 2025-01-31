@@ -28,14 +28,10 @@ export const singletonPlugin = definePlugin((types: string[]) => {
   };
 });
 
-// The StructureResolver is how we're changing the DeskTool structure to linking to document (named Singleton)
-// like how "Home" is handled.
 export const pageStructure = (
   typeDefArray: DocumentDefinition[],
 ): StructureResolver => {
   return (S) => {
-    // Goes through all of the singletons that were provided and translates them into something the
-    // Structure tool can understand
     const singletonItems = typeDefArray.map((typeDef) => {
       return S.listItem()
         .title(typeDef.title!)

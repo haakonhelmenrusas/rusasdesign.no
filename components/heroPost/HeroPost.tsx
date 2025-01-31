@@ -1,23 +1,19 @@
 import type { HeroQueryResult } from '@/sanity.types';
 import Link from 'next/link';
-import { Avatar, CoverImage, DateComponent } from '@/components';
+import { Avatar, DateComponent } from '@/components';
 
 export default function HeroPost({
                                    title,
                                    slug,
                                    excerpt,
-                                   coverImage,
                                    date,
                                    author,
                                  }: Pick<
   Exclude<HeroQueryResult, null>,
-  'title' | 'coverImage' | 'date' | 'excerpt' | 'author' | 'slug'
+  'title' | 'date' | 'excerpt' | 'author' | 'slug'
 >) {
   return (
     <article>
-      <Link className="group mb-8 block md:mb-16" href={`/posts/${slug}`}>
-        <CoverImage image={coverImage} priority />
-      </Link>
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="text-pretty mb-4 text-4xl leading-tight lg:text-6xl">
