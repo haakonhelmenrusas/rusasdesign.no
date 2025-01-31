@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: getting there">
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,29 +60,28 @@
   <component name="ProjectId" id="2oUWiIMBJOCLVMlVWf20DqRtOOc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "feat/new-project",
-    "last_opened_file_path": "/Users/haakonrusas/Prosjekter/rusasdesign.no/app/(sanity)",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.typegen.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
-    "ts.external.directory.path": "/Users/haakonrusas/Prosjekter/rusasdesign.no/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/new-project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/haakonrusas/Prosjekter/rusasdesign.no/app/(sanity)&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.typegen.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/haakonrusas/Prosjekter/rusasdesign.no/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/(sanity)" />
@@ -148,7 +146,8 @@
       <workItem from="1736255882114" duration="4115000" />
       <workItem from="1738061842990" duration="10091000" />
       <workItem from="1738145578033" duration="500000" />
-      <workItem from="1738146171451" duration="24648000" />
+      <workItem from="1738146171451" duration="25306000" />
+      <workItem from="1738340068393" duration="21000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -234,7 +233,14 @@
       <option name="presentableId" value="LOCAL−00012" />
       <updated>1738324620703</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL−00013" summary="style: header styles">
+      <option name="closed" value="true" />
+      <created>1738337740277</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1738337740277</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +282,7 @@
     <MESSAGE value="fix: remove AI" />
     <MESSAGE value="fix: fixing all the things" />
     <MESSAGE value="fix: getting there" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: getting there" />
+    <MESSAGE value="style: header styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: header styles" />
   </component>
 </project>
