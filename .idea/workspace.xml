@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: fixing all the things">
-      <change afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: getting there">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(blog)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/coverImage/cover-image.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/heroPost/HeroPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/heroPost/HeroPost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/fetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/plugins/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/plugins/settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/author.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/author.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +148,7 @@
       <workItem from="1736255882114" duration="4115000" />
       <workItem from="1738061842990" duration="10091000" />
       <workItem from="1738145578033" duration="500000" />
-      <workItem from="1738146171451" duration="23358000" />
+      <workItem from="1738146171451" duration="24648000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -242,7 +227,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1738229892082</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="fix: getting there">
+      <option name="closed" value="true" />
+      <created>1738324620703</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1738324620703</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +275,7 @@
     <MESSAGE value="feat: full reset and restructure of the project" />
     <MESSAGE value="fix: remove AI" />
     <MESSAGE value="fix: fixing all the things" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fixing all the things" />
+    <MESSAGE value="fix: getting there" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: getting there" />
   </component>
 </project>

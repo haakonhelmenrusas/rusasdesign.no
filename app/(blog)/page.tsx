@@ -12,7 +12,7 @@ export default async function Page() {
   ]);
 
   return (
-    <div className="max-w-screen-lg mx-auto px-5">
+    <div className="max-w-screen-lg mx-auto px-5 mt-8">
       <Header title={settings?.title} description={settings?.description} />
       {heroPost ? (
         <HeroPost
