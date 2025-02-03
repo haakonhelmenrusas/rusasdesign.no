@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="ci: upgrade tailwindcss v4">
+      <change afterPath="$PROJECT_DIR$/components/category/Category.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(blog)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/portableText/portable-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portableText/portable-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/fetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +73,7 @@
   <component name="ProjectId" id="2oUWiIMBJOCLVMlVWf20DqRtOOc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
@@ -240,7 +254,21 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1738337740277</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="fix: styling">
+      <option name="closed" value="true" />
+      <created>1738350828781</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1738350828781</updated>
+    </task>
+    <task id="LOCAL−00015" summary="ci: upgrade tailwindcss v4">
+      <option name="closed" value="true" />
+      <created>1738351217403</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1738351217403</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +311,8 @@
     <MESSAGE value="fix: fixing all the things" />
     <MESSAGE value="fix: getting there" />
     <MESSAGE value="style: header styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: header styles" />
+    <MESSAGE value="fix: styling" />
+    <MESSAGE value="ci: upgrade tailwindcss v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: upgrade tailwindcss v4" />
   </component>
 </project>
