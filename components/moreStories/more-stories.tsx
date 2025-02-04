@@ -1,27 +1,25 @@
 import Link from 'next/link';
-import { Avatar, DateComponent } from '@/components';
+import { Category, DateComponent } from '@/components';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { moreStoriesQuery } from '@/sanity/lib/queries';
+import { MoreStoriesQueryResult } from '@/sanity.types';
 
-export default async function MoreStories(params: {
-  skip: string;
-  limit: number;
-}) {
-  const data = await sanityFetch({ query: moreStoriesQuery, params });
+export default async function MoreStories(params: { skip?: string, limit: number; }) {
+  const data: MoreStoriesQueryResult = await sanityFetch({ query: moreStoriesQuery, params });
 
   return (
     <>
-      <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
+      <div className="mb-16 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
         {data?.map((post) => {
-          const { _id, title, slug, excerpt, author } = post;
+          const { _id, title, slug, excerpt, category } = post;
           return (
-            <article key={_id} className="shadow p-8 bg-gray-100 rounded-lg">
-              <h3 className="text-balance mb-3 text-3xl leading-snug">
+            <article key={_id} className="shadow-lg p-8 bg-gray-100 dark:text-gray-50 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-balance mb-3 text-2xl leading-snug">
                 <Link href={`/posts/${slug}`} className="hover:underline">
                   {title}
                 </Link>
               </h3>
-              <div className="mb-4 text-lg">
+              <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <DateComponent dateString={post.date} />
               </div>
               {excerpt && (
@@ -29,7 +27,9 @@ export default async function MoreStories(params: {
                   {excerpt}
                 </p>
               )}
-              {author && <Avatar name={author.name} picture={author.picture} />}
+              {category && (
+                <Category title={category.title} />
+              )}
             </article>
           );
         })}

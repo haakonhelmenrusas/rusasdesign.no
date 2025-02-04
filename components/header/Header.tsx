@@ -12,7 +12,7 @@ export default function Header(props: { title: string | null | undefined; descri
       </h1>
       <h2 className="text-lg">
         <PortableText
-          className="prose-lg"
+          className="prose-lg dark:text-gray-50"
           value={description?.length ? description : ''}
         />
       </h2>

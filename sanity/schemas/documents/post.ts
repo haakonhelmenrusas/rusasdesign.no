@@ -1,4 +1,4 @@
-import { DocumentTextIcon } from '@sanity/icons';
+import { DocumentTextIcon, ImageIcon } from '@sanity/icons';
 import { format, parseISO } from 'date-fns';
 import { defineField, defineType } from 'sanity';
 
@@ -32,7 +32,7 @@ export default defineType({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'block' }, { type: 'image', icon: ImageIcon }],
     }),
     defineField({
       name: 'excerpt',
