@@ -53,7 +53,7 @@ export default async function RootLayout({ children }: { children: ReactNode; })
   const { isEnabled: isDraftMode } = await draftMode();
 
   return (
-    <html lang="no" className={`${inter.variable} bg-gray-200 dark:text-gray-50 dark:bg-gray-700 text-black h-full`}>
+    <html lang="no" className={`${inter.variable} bg-gray-200 dark:text-gray-50 dark:bg-gray-800 text-black h-full`}>
     <body className="min-h-screen flex flex-col">
     {isDraftMode && <AlertBanner />}
     <main className="grow">{children}</main>

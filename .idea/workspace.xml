@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix">
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: getting there">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(blog)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(blog)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/portableText/portable-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portableText/portable-text.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/fetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +271,14 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1738577369796</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="fix: getting there">
+      <option name="closed" value="true" />
+      <created>1738674482928</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1738674482928</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,12 +319,12 @@
     <MESSAGE value="feat: full reset and restructure of the project" />
     <MESSAGE value="fix: remove AI" />
     <MESSAGE value="fix: fixing all the things" />
-    <MESSAGE value="fix: getting there" />
     <MESSAGE value="style: header styles" />
     <MESSAGE value="fix: styling" />
     <MESSAGE value="ci: upgrade tailwindcss v4" />
     <MESSAGE value="feat: new Category component" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="fix: getting there" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: getting there" />
   </component>
 </project>
