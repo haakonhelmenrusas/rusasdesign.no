@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: getting there">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/layout.tsx" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/app/(blog)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(blog)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +275,14 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1738674482928</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="fix">
+      <option name="closed" value="true" />
+      <created>1738700685418</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1738700685418</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,8 +327,8 @@
     <MESSAGE value="fix: styling" />
     <MESSAGE value="ci: upgrade tailwindcss v4" />
     <MESSAGE value="feat: new Category component" />
-    <MESSAGE value="fix" />
     <MESSAGE value="fix: getting there" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: getting there" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

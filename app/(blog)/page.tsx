@@ -26,7 +26,7 @@ export default async function Page() {
         <div className="rounded-2xl overflow-hidden height-400 w-full">
           <Image
             src={'https://www.shutterstock.com/nb/image-illustration/responsive-web-design-studio-page-displayed-2528620173'}
-            alt={''} width={400} height={400} loading="lazy" />
+            alt={''} width={440} height={400} loading="lazy" />
         </div>
         <div className="flex flex-col justify-between">
           <div className="rounded-2xl flex bg-gray-700 dark:bg-gray-900 p-6">
