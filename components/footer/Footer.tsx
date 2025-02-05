@@ -7,7 +7,7 @@ interface FooterProps {
 
 export default function Footer({ footer }: FooterProps) {
   return (
-    <footer className="bg-gray-200 dark:text-gray-50 dark:bg-gray-700 border-accent-2 mt-auto">
+    <footer className="bg-gray-200 dark:text-gray-50 dark:bg-gray-800 border-accent-2 mt-auto">
       <div className="container mx-auto px-5">
         {footer && footer.length > 0 ? (
           <PortableText

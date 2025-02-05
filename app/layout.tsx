@@ -1,11 +1,11 @@
-import '../globals.css';
+import './globals.css';
 
 import type { Metadata } from 'next';
 import { toPlainText, VisualEditing } from 'next-sanity';
 import { Inter } from 'next/font/google';
 import { draftMode } from 'next/headers';
 
-import { AlertBanner, Footer } from '@/components/';
+import { AlertBanner, Footer } from '@/components';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { settingsQuery } from '@/sanity/lib/queries';
 import { resolveOpenGraphImage } from '@/sanity/lib/utils';
