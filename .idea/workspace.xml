@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="docs: clean up readme">
-      <change afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/om-meg/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="feat: about, projects and blog">
+      <change afterPath="$PROJECT_DIR$/app/prosjekter/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(blog)/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/posts/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/alertBanner/alert-banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/alertBanner/alert-banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogg/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +91,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/blogg" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/components/portableText" />
       <recent name="$PROJECT_DIR$/components/moreStories" />
       <recent name="$PROJECT_DIR$/components/date" />
-      <recent name="$PROJECT_DIR$/components/alertBanner" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -308,7 +299,14 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1738735145507</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="feat: about, projects and blog">
+      <option name="closed" value="true" />
+      <created>1738766676507</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1738766676508</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +354,7 @@
     <MESSAGE value="fix: getting there" />
     <MESSAGE value="fix" />
     <MESSAGE value="docs: clean up readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: clean up readme" />
+    <MESSAGE value="feat: about, projects and blog" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: about, projects and blog" />
   </component>
 </project>
