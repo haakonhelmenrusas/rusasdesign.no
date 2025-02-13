@@ -7,8 +7,12 @@ const imageBuilder = createImageUrlBuilder({
   dataset: dataset || '',
 });
 
+/**
+ * Get the URL for an image
+ * @param source
+ * @returns The URL for the image
+ */
 export const urlForImage = (source: any) => {
-  // Ensure that source image contains a valid reference
   if (!source?.asset?._ref) {
     return undefined;
   }

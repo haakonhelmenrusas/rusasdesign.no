@@ -5,7 +5,7 @@ import { toPlainText, VisualEditing } from 'next-sanity';
 import { Inter } from 'next/font/google';
 import { draftMode } from 'next/headers';
 
-import { AlertBanner, Footer } from '@/components';
+import { AlertBanner, Footer, Nav } from '@/components';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { settingsQuery } from '@/sanity/lib/queries';
 import { resolveOpenGraphImage } from '@/sanity/lib/utils';
@@ -56,7 +56,10 @@ export default async function RootLayout({ children }: { children: ReactNode; })
     <html lang="no" className={`${inter.variable} bg-gray-200 dark:text-gray-50 dark:bg-gray-800 text-black h-full`}>
     <body className="min-h-screen flex flex-col">
     {isDraftMode && <AlertBanner />}
-    <main className="grow">{children}</main>
+    <main className="grow max-w-(--breakpoint-lg) mx-auto px-5 mt-8">
+      <Nav />
+      {children}
+    </main>
     <Footer footer={footer} />
     {isDraftMode && <VisualEditing />}
     </body>

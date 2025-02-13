@@ -9,11 +9,12 @@ import { structureTool } from 'sanity/structure';
 
 import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api';
 import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings';
-import author from '@/sanity/schemas/documents/author';
 import post from '@/sanity/schemas/documents/post';
 import settings from '@/sanity/schemas/singletons/settings';
 import { resolveHref } from '@/sanity/lib/utils';
 import category from '@/sanity/schemas/documents/category';
+import project from '@/sanity/schemas/documents/project';
+import blockContent from '@/sanity/schemas/documents/blockContent';
 
 const homeLocation = {
   title: 'Home',
@@ -27,9 +28,10 @@ export default defineConfig({
   schema: {
     types: [
       settings,
+      blockContent,
       post,
-      author,
       category,
+      project,
     ],
   },
   plugins: [

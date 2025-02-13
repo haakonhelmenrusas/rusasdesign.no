@@ -3,9 +3,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
-
 import { sanityFetch } from '@/sanity/lib/fetch';
-import { postQuery, settingsQuery } from '@/sanity/lib/queries';
+import { postQuery } from '@/sanity/lib/queries';
 import { Category, DateComponent, MoreStories, PortableText } from '@/components';
 
 type Props = {
@@ -32,19 +31,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 
   return {
-    authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
+    authors: { name: 'Haakon Helmen Rusås' },
     title: post?.title,
     description: post?.excerpt,
   } satisfies Metadata;
 }
 
 export default async function PostPage({ params }: Props) {
-  const [post, settings] = await Promise.all([
-    sanityFetch({ query: postQuery, params }),
-    sanityFetch({ query: settingsQuery }),
-  ]);
+  const data = await sanityFetch({ query: postQuery, params });
 
-  if (!post?._id) {
+  if (!data?._id) {
     return notFound();
   }
 
@@ -52,30 +48,30 @@ export default async function PostPage({ params }: Props) {
     <div className="max-w-3xl mx-auto px-5 dark:text-white dark:bg-gray-800">
       <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
         <Link href="/" className="hover:underline">
-          {settings?.title || ''}
+          Rusås Design
         </Link>
       </h2>
       <article className="mb-6">
         <h1
           className="text-balance mb-12 text-2xl font-medium leading-tight md:text-4xl lg:text-4xl">
-          {post.title}
+          {data.title}
         </h1>
         <div className="md:mb-4 md:block">
-          {post.category && (
-            <Category title={post.category.title} />
+          {data.category && (
+            <Category title={data.category.title} />
           )}
         </div>
         <div className="mx-auto">
           <div className="mb-6 text-lg">
             <div className="mb-4 text-lg">
-              <DateComponent dateString={post.date} />
+              <DateComponent dateString={data.date} />
             </div>
           </div>
         </div>
-        {post.content?.length && (
+        {data.content?.length && (
           <PortableText
-            className="mx-auto max-w-3xl p-12 rounded-sm bg-gray-500 dark:bg-gray-800 dark:text-gray-50 text-gray-50"
-            value={post.content as PortableTextBlock[]}
+            className="mx-auto max-w-3xl rounded-sm bg-gray-500 dark:bg-gray-800 dark:text-gray-50 text-gray-50"
+            value={data.content as PortableTextBlock[]}
           />
         )}
       </article>
@@ -84,7 +80,7 @@ export default async function PostPage({ params }: Props) {
           Flere artikler
         </h2>
         <Suspense>
-          <MoreStories skip={post._id} limit={2} />
+          <MoreStories skip={data._id} limit={2} />
         </Suspense>
       </aside>
     </div>

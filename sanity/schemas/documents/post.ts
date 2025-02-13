@@ -1,8 +1,6 @@
-import { DocumentTextIcon, ImageIcon } from '@sanity/icons';
+import { DocumentTextIcon } from '@sanity/icons';
 import { format, parseISO } from 'date-fns';
 import { defineField, defineType } from 'sanity';
-
-import authorType from './author';
 
 export default defineType({
   name: 'post',
@@ -31,8 +29,7 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }, { type: 'image', icon: ImageIcon }],
+      type: 'blockContent',
     }),
     defineField({
       name: 'excerpt',
@@ -46,12 +43,6 @@ export default defineType({
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: [{ type: authorType.name }],
-    }),
-    defineField({
       name: 'category',
       title: 'Category',
       type: 'reference',
@@ -61,12 +52,10 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
       date: 'date',
     },
-    prepare({ title, author, date }) {
+    prepare({ title, date }) {
       const subtitles = [
-        author && `by ${author}`,
         date && `on ${format(parseISO(date), 'LLL d, yyyy')}`,
       ].filter(Boolean);
 

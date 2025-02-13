@@ -2,6 +2,7 @@ import { PortableText, type PortableTextBlock, type PortableTextComponents } fro
 import { getImageDimensions } from '@sanity/asset-utils';
 import { Image } from 'next-sanity/image';
 import { urlForImage } from '@/sanity/lib/utils';
+import Code from '@/components/code/Code';
 
 interface ImageComponentProps {
   value: {
@@ -38,9 +39,6 @@ export default function CustomPortableText({ className, value }: {
   const components: PortableTextComponents = {
     block: {
       p: ({ children }) => <p className="mb-4 dark:text-gray-50">{children}</p>,
-      ul: ({ children }) => <ul className="mb-4 dark:text-gray-50">{children}</ul>,
-      ol: ({ children }) => <ol className="mb-4 dark:text-gray-50">{children}</ol>,
-      li: ({ children }) => <li className="mb-2 dark:text-gray-50">{children}</li>,
       h1: ({ children }) => (
         <h1 className="mb-4 text-3xl font-semibold dark:text-gray-50">{children}</h1>
       ),
@@ -61,22 +59,34 @@ export default function CustomPortableText({ className, value }: {
       ),
       strong: ({ children }) => <strong className="font-semibold dark:text-gray-50">{children}</strong>,
       blockquote: ({ children }) => (
-        <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600 dark:text-gray-400">
+        <blockquote className="border-l-4 border-gray-300 pl-4 text-gray-600 dark:text-gray-400">
           {children}
         </blockquote>
       ),
+      code: ({ children }) => (
+        Code({ code: children ? children.toString() : '', lang: 'bash', theme: 'nord' })
+      ),
     },
+    list: {
+      bullet: ({ children }) => <ul className="mb-4 dark:text-gray-50">{children}</ul>,
+      number: ({ children }) => <ol className="mb-4 dark:text-gray-50">{children}</ol>,
+    },
+    listItem: ({ children }) => <li className="mb-2 dark:text-gray-50">{children}</li>,
     types: {
       image: ImageComponent,
     },
     marks: {
       link: ({ children, value }) => {
         return (
-          <a href={value?.href} rel="noreferrer noopener dark:text-blue-400 text-blue-600">
+          <a href={value?.href}
+             rel="noreferrer noopener dark:text-blue-300 text-blue-600 dark:hover:text-blue-300 hover:text-blue-800">
             {children}
           </a>
         );
       },
+      code: ({ children }) => (
+        Code({ code: children ? children.toString() : '', lang: 'bash', theme: 'nord' })
+      ),
     },
   };
 

@@ -9,7 +9,7 @@ export default async function MoreStories(params: { skip?: string, limit: number
 
   return (
     <>
-      <div className="mb-16 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-16">
+      <div className="mb-16 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-16 lg:gap-x-16">
         {data?.map((post) => {
           const { _id, title, slug, excerpt, category } = post;
           return (

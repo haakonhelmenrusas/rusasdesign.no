@@ -13,12 +13,6 @@ const postFields = /* groq */ `
   "author": author->{"name": coalesce(name, "Anonymous"), picture},
 `;
 
-export const heroQuery = defineQuery(`
-  *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) [0] {
-    content,
-    ${postFields}
-  }
-`);
 
 export const moreStoriesQuery = defineQuery(`
   *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {
@@ -47,4 +41,13 @@ export const categoryQuery = defineQuery(`
       ${postFields}
     }
   } [0]
+`);
+
+export const projectsQuery = defineQuery(`
+  *[_type == "project" | order(date desc, _updatedAt desc)] {
+    _id,
+    title,
+    slug,
+    content,
+  }
 `);
