@@ -4,33 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/code/Code.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/nav/Nav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanity/schemas/documents/blockContent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sanity/schemas/documents/project.ts" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(sanity)/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(sanity)/studio/[[...tool]]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(sanity)/studio/[[...tool]]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/prosjekter/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/prosjekter/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/category/Category.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/category/Category.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/portableText/portable-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portableText/portable-text.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/author.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +151,7 @@
       <workItem from="1738146171451" duration="25306000" />
       <workItem from="1738340068393" duration="21000" />
       <workItem from="1739259221000" duration="6650000" />
-      <workItem from="1739344775412" duration="5927000" />
+      <workItem from="1739344775412" duration="6093000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -337,7 +314,14 @@
       <option name="presentableId" value="LOCAL−00023" />
       <updated>1738841537740</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL−00024" summary="fix: wip">
+      <option name="closed" value="true" />
+      <created>1739446073812</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1739446073812</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +371,7 @@
     <MESSAGE value="docs: clean up readme" />
     <MESSAGE value="feat: about, projects and blog" />
     <MESSAGE value="fix: url to blog" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: url to blog" />
+    <MESSAGE value="fix: wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: wip" />
   </component>
 </project>
