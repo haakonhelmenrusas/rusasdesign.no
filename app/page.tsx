@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { settingsQuery } from '@/sanity/lib/queries';
 import Link from 'next/link';
-
+import Nav from '@/components/nav/Nav';
 
 export default async function Home() {
   const data = await sanityFetch({
@@ -12,6 +12,7 @@ export default async function Home() {
 
   return (
     <>
+      <Nav />
       <Header title={data?.title} description={data?.description} />
       <section className="my-50">
         <h3 className="mb-8 text-4xl font-medium leading-tight tracking-tighter md:text-4xl">

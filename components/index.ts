@@ -6,3 +6,6 @@ export { default as PortableText } from './portableText/portable-text';
 export { default as Footer } from './footer/Footer';
 export { default as Category } from './category/Category';
 export { default as Nav } from './nav/Nav';
+export { default as ArticleCard } from './articleCard/ArticleCard';
+export { default as BackButton } from './backButton/BackButton';
+export { default as Loading } from './loading/Loading';

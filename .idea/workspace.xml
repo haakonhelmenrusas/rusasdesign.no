@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="ci: adding Sentry to project">
-      <change beforePath="$PROJECT_DIR$/components/avatar/avatar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/heroPost/HeroPost.tsx" beforeDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/articleCard/ArticleCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/backButton/BackButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/loading/Loading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/nav/NavWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/om-meg/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prosjekter/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/prosjekter/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +105,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/app/blogg" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/components/portableText" />
-      <recent name="$PROJECT_DIR$/components/moreStories" />
-      <recent name="$PROJECT_DIR$/components/date" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -151,7 +166,8 @@
       <workItem from="1738146171451" duration="25306000" />
       <workItem from="1738340068393" duration="21000" />
       <workItem from="1739259221000" duration="6650000" />
-      <workItem from="1739344775412" duration="7066000" />
+      <workItem from="1739344775412" duration="14912000" />
+      <workItem from="1739563769359" duration="9499000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -335,7 +351,14 @@
       <option name="presentableId" value="LOCAL−00026" />
       <updated>1739447832135</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="fix: remove unused components">
+      <option name="closed" value="true" />
+      <created>1739448006489</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1739448006489</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,6 +411,7 @@
     <MESSAGE value="fix: wip" />
     <MESSAGE value="style: style nav" />
     <MESSAGE value="ci: adding Sentry to project" />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: adding Sentry to project" />
+    <MESSAGE value="fix: remove unused components" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove unused components" />
   </component>
 </project>
