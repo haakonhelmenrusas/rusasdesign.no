@@ -1,11 +1,10 @@
 import { defineQuery, type PortableTextBlock } from 'next-sanity';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { postQuery } from '@/sanity/lib/queries';
-import { Category, DateComponent, MoreStories, PortableText } from '@/components';
+import { BackButton, Category, DateComponent, MoreStories, Nav, PortableText } from '@/components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -46,12 +45,9 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <>
-      <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
-        <Link href="/" className="hover:underline">
-          Rusås Design
-        </Link>
-      </h2>
-      <article className="mb-6">
+      <Nav />
+      <BackButton />
+      <article className="mb-6 max-w-(--breakpoint-md) mx-auto">
         <h1
           className="text-balance mb-12 text-2xl font-medium leading-tight md:text-4xl lg:text-4xl">
           {data.title}
@@ -70,12 +66,12 @@ export default async function PostPage({ params }: Props) {
         </div>
         {data.content?.length && (
           <PortableText
-            className="mx-auto max-w-3xl rounded-sm bg-gray-500 dark:bg-gray-800 dark:text-gray-50 text-gray-50"
+            className="max-w-3xl rounded-sm bg-gray-200 dark:bg-gray-800 dark:text-gray-50 text-gray-50"
             value={data.content as PortableTextBlock[]}
           />
         )}
       </article>
-      <aside>
+      <aside className="my-16">
         <h2 className="mb-8 text-4xl font-bold tracking-tighter md:text-4xl">
           Flere artikler
         </h2>

@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/articleCard/ArticleCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/backButton/BackButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/loading/Loading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/nav/NavWrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/om-meg/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prosjekter/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/prosjekter/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +130,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
       </set>
     </attachedChunks>
   </component>
@@ -167,7 +154,9 @@
       <workItem from="1738340068393" duration="21000" />
       <workItem from="1739259221000" duration="6650000" />
       <workItem from="1739344775412" duration="14912000" />
-      <workItem from="1739563769359" duration="9499000" />
+      <workItem from="1739563769359" duration="10871000" />
+      <workItem from="1740129080081" duration="8356000" />
+      <workItem from="1740474429349" duration="3645000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -358,7 +347,21 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1739448006489</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="fix">
+      <option name="closed" value="true" />
+      <created>1739779876698</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1739779876698</updated>
+    </task>
+    <task id="LOCAL−00029" summary="feat: dark logo">
+      <option name="closed" value="true" />
+      <created>1739779890088</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1739779890088</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +407,6 @@
     <MESSAGE value="ci: upgrade tailwindcss v4" />
     <MESSAGE value="feat: new Category component" />
     <MESSAGE value="fix: getting there" />
-    <MESSAGE value="fix" />
     <MESSAGE value="docs: clean up readme" />
     <MESSAGE value="feat: about, projects and blog" />
     <MESSAGE value="fix: url to blog" />
@@ -412,6 +414,8 @@
     <MESSAGE value="style: style nav" />
     <MESSAGE value="ci: adding Sentry to project" />
     <MESSAGE value="fix: remove unused components" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove unused components" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="feat: dark logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: dark logo" />
   </component>
 </project>

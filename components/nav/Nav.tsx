@@ -8,7 +8,7 @@ export default function Nav() {
   const currentPath = usePathname();
 
   return (
-    <nav className="flex justify-end items-center">
+    <nav className="flex justify-end items-center mb-8">
       <Link href={currentPath === '/' ? '#' : '/'} className="mr-auto">
         <Image src="/assets/logo.png" alt="Logo" width={56} height={56} />
       </Link>

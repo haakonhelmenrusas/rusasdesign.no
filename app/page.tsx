@@ -1,5 +1,4 @@
 import { Header, MoreStories } from '@/components';
-import { Suspense } from 'react';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { settingsQuery } from '@/sanity/lib/queries';
 import Link from 'next/link';
@@ -37,9 +36,7 @@ export default async function Home() {
         <h3 className="mb-8 text-4xl font-bold leading-tight tracking-tighter md:text-4xl">
           <Link className="hover:underline" href="/blogg">Blogg</Link>
         </h3>
-        <Suspense>
-          <MoreStories skip={''} limit={5} />
-        </Suspense>
+        <MoreStories skip={''} limit={5} />
       </aside>
     </>
   );
