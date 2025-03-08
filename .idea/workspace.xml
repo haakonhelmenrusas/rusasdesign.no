@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogg/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentry.client.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sentry.client.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentry.edge.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sentry.edge.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentry.server.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sentry.server.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +133,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
       </set>
     </attachedChunks>
   </component>
@@ -157,6 +160,8 @@
       <workItem from="1739563769359" duration="10871000" />
       <workItem from="1740129080081" duration="8356000" />
       <workItem from="1740474429349" duration="3645000" />
+      <workItem from="1740564639556" duration="3733000" />
+      <workItem from="1741327301737" duration="5568000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -361,7 +366,14 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1739779890088</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="wip">
+      <option name="closed" value="true" />
+      <created>1740649846167</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1740649846167</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +410,6 @@
     <MESSAGE value="refactor: index export components" />
     <MESSAGE value="fix: clean up" />
     <MESSAGE value="ci: upgrade packages" />
-    <MESSAGE value="wip" />
     <MESSAGE value="feat: full reset and restructure of the project" />
     <MESSAGE value="fix: remove AI" />
     <MESSAGE value="fix: fixing all the things" />
@@ -416,6 +427,7 @@
     <MESSAGE value="fix: remove unused components" />
     <MESSAGE value="fix" />
     <MESSAGE value="feat: dark logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: dark logo" />
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
   </component>
 </project>

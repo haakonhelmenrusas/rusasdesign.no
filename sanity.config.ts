@@ -1,7 +1,5 @@
 'use client';
-/**
- * This config is used to set up Sanity Studio that's mounted on the `app/(sanity)/studio/[[...tool]]/page.tsx` route
- */
+
 import { visionTool } from '@sanity/vision';
 import { defineConfig, PluginOptions } from 'sanity';
 import { defineDocuments, defineLocations, type DocumentLocation, presentationTool } from 'sanity/presentation';
