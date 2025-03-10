@@ -20,7 +20,7 @@ export default async function Projects() {
             return (
               <article key={_id} className="shadow-lg p-8 bg-gray-100 dark:text-gray-50 dark:bg-gray-900 rounded-lg">
                 <h3 className="text-balance mb-3 text-2xl leading-snug">
-                  <Link href={`/prosjekter/${slug}`} className="hover:underline">
+                  <Link href={`/app/(pages)/prosjekter/${slug}`} className="hover:underline">
                     {title}
                   </Link>
                 </h3>
