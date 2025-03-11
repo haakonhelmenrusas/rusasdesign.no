@@ -1,36 +1,6 @@
 import { PortableText, type PortableTextBlock, type PortableTextComponents } from 'next-sanity';
-import { getImageDimensions } from '@sanity/asset-utils';
-import { Image } from 'next-sanity/image';
-import { urlForImage } from '@/sanity/lib/utils';
-import Code from '@/components/code/Code';
-
-interface ImageComponentProps {
-  value: {
-    asset: {
-      _ref: string;
-    };
-    alt: string;
-  };
-  isInline: boolean;
-}
-
-const ImageComponent = ({ value, isInline }: ImageComponentProps) => {
-  const { width, height } = getImageDimensions(value);
-  return (
-    <Image
-      width={width}
-      height={height}
-      src={urlForImage(value)?.url() as string || ''}
-      alt={value.alt || ' '}
-      loading="lazy"
-      style={{
-        // Display alongside text if image appears inside a block text span
-        display: isInline ? 'inline-block' : 'block',
-        aspectRatio: width / height,
-      }}
-    />
-  );
-};
+import Code from './components/Code';
+import ImageComponent from './components/Image';
 
 export default function CustomPortableText({ className, value }: {
   className?: string;
@@ -63,9 +33,6 @@ export default function CustomPortableText({ className, value }: {
           {children}
         </blockquote>
       ),
-      code: ({ children }) => (
-        Code({ code: children ? children.toString() : '', lang: 'bash', theme: 'nord' })
-      ),
     },
     list: {
       bullet: ({ children }) => <ul className="mb-4 dark:text-gray-50">{children}</ul>,
@@ -85,7 +52,7 @@ export default function CustomPortableText({ className, value }: {
         );
       },
       code: ({ children }) => (
-        Code({ code: children ? children.toString() : '', lang: 'bash', theme: 'nord' })
+        <Code code={children ? children.toString() : ''} lang="bash" theme="nord" />
       ),
     },
   };
