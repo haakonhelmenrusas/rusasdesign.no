@@ -2,7 +2,7 @@ import { defineQuery } from 'next-sanity';
 
 export const settingsQuery = defineQuery(`*[_type == "settings"][0]`);
 
-const postFields = /* groq */ `
+const postFields = `
   _id,
   "status": select(_originalId in path("drafts.**") => "draft", "published"),
   "title": coalesce(title, "Untitled"),
@@ -11,7 +11,6 @@ const postFields = /* groq */ `
   category->{"title": coalesce(title, "Uncategorized")},
   "date": coalesce(date, _updatedAt),
 `;
-
 
 export const moreStoriesQuery = defineQuery(`
   *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {
@@ -32,21 +31,11 @@ export const postQuery = defineQuery(`
   }
 `);
 
-export const categoryQuery = defineQuery(`
-  *[_type == "category" && slug.current == $slug] {
-    _id,
-    title,
-    "posts": *[_type == "post" && references(^._id)] {
-      ${postFields}
-    }
-  } [0]
-`);
-
 export const projectsQuery = defineQuery(`
-  *[_type == "project" | order(date desc, _updatedAt desc)] {
+  *[_type == "project" && defined(slug.current)] | order(date desc, _updatedAt desc) {
     _id,
     title,
-    slug,
+    "slug": slug.current,
     content,
   }
 `);

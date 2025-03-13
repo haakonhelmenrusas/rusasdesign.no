@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/portableText/components/Code.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/portableText/components/Image.tsx" afterDir="false" />
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: refactor code component and move portable-text components to new dir">
+      <change afterPath="$PROJECT_DIR$/app/(pages)/om-meg/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/code/Code.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/prosjekter/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/portableText/components/Code.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portableText/components/Code.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/portableText/portable-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/portableText/portable-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/lib/queries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/lib/queries.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/blockContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/blockContent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/sanity/schemas/documents/post.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,7 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="tsconfig.json" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -160,7 +169,7 @@
       <workItem from="1740474429349" duration="3645000" />
       <workItem from="1740564639556" duration="3733000" />
       <workItem from="1741327301737" duration="12723000" />
-      <workItem from="1741694338359" duration="1825000" />
+      <workItem from="1741694338359" duration="16432000" />
     </task>
     <task id="LOCAL−00001" summary="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15">
       <option name="closed" value="true" />
@@ -386,7 +395,14 @@
       <option name="presentableId" value="LOCAL−00032" />
       <updated>1741607809852</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL−00033" summary="fix: refactor code component and move portable-text components to new dir">
+      <option name="closed" value="true" />
+      <created>1741700930097</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1741700930097</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +434,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix: eslint upgrade and fixes&#10;And upgraded packages ex. next 15" />
     <MESSAGE value="fix: remove placeholder" />
     <MESSAGE value="refactor: index export components" />
     <MESSAGE value="fix: clean up" />
@@ -443,6 +458,7 @@
     <MESSAGE value="wip" />
     <MESSAGE value="ci: clean up comments" />
     <MESSAGE value="refactor: move pages to own folder to separate layout from the Sanity studio page" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: move pages to own folder to separate layout from the Sanity studio page" />
+    <MESSAGE value="fix: refactor code component and move portable-text components to new dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: refactor code component and move portable-text components to new dir" />
   </component>
 </project>

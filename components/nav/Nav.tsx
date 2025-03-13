@@ -20,9 +20,9 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/prosjekter"
-                className={`text-lg font-light hover:underline ${currentPath === '/prosjekter' ? 'underline' : ''}`}>
-            Prosjekter
+          <Link href="/om-meg"
+                className={`text-lg font-light hover:underline ${currentPath === '/om-om-meg' ? 'underline' : ''}`}>
+            Om meg
           </Link>
         </li>
       </ul>

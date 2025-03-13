@@ -28,7 +28,16 @@ export default defineType({
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
-          { title: 'Code', value: 'code' },
+          {
+            title: 'Caption',
+            value: 'caption',
+            icon: () => 'CAP',
+          },
+          {
+            title: 'Inline Code',
+            value: 'inlineCode',
+            icon: () => '</>',
+          },
           {
             title: 'Highlight',
             value: 'highlight',
@@ -36,6 +45,20 @@ export default defineType({
           },
           { title: 'Underline', value: 'underline' },
           { title: 'Strike', value: 'strike-through' },
+        ],
+        annotations: [
+          {
+            title: 'URL',
+            name: 'link',
+            type: 'object',
+            fields: [
+              {
+                title: 'URL',
+                name: 'href',
+                type: 'url',
+              },
+            ],
+          },
         ],
       },
     }),
@@ -49,6 +72,9 @@ export default defineType({
           title: 'Alternative Text',
         },
       ],
+    }),
+    defineArrayMember({
+      type: 'code',
     }),
   ],
 });

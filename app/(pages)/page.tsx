@@ -26,10 +26,8 @@ export default async function Home() {
         <p className="mb-4 text-lg font-light">Om du vil lese litt i bloggen så er det
           en <Link className="dark:text-blue-300 hover:underline" href="/blogg"
                    aria-label="lenke til bloggen">lenke
-            her</Link>, <Link className="dark:text-blue-300 hover:underline" href="/prosjekter"
-                              aria-label="lenke til prosjekter">her er</Link> noen av prosjektene jeg
-          gjort, og her kan du lese litt mer om <Link className="dark:text-blue-300 hover:underline"
-                                                      href="/om-meg">meg</Link>.</p>
+            her</Link> og her kan du lese litt mer om <Link className="dark:text-blue-300 hover:underline"
+                                                            href="/om-meg">meg</Link>.</p>
       </section>
       <aside
         className="transition-transform transform translate-x-10 opacity-0 duration-500 ease-in-out delay-500 md:translate-x-0 md:opacity-100">

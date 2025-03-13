@@ -35,12 +35,13 @@ export default function CustomPortableText({ className, value }: {
       ),
     },
     list: {
-      bullet: ({ children }) => <ul className="mb-4 dark:text-gray-50">{children}</ul>,
+      bullet: ({ children }) => <ul className="mb-2 mt-0 dark:text-gray-50">{children}</ul>,
       number: ({ children }) => <ol className="mb-4 dark:text-gray-50">{children}</ol>,
     },
     listItem: ({ children }) => <li className="mb-2 dark:text-gray-50">{children}</li>,
     types: {
-      image: ImageComponent,
+      image: ({ value, isInline }) => <ImageComponent value={value} isInline={isInline} />,
+      code: ({ value }) => <Code value={value} />,
     },
     marks: {
       link: ({ children, value }) => {
@@ -51,9 +52,6 @@ export default function CustomPortableText({ className, value }: {
           </a>
         );
       },
-      code: ({ children }) => (
-        <Code code={children ? children.toString() : ''} lang="bash" theme="nord" />
-      ),
     },
   };
 

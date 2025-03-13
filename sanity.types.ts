@@ -78,37 +78,49 @@ export type Project = {
   slug?: Slug;
   content?: Array<
     | {
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
-    listItem?: 'bullet' | 'number';
-    markDefs?: Array<{
-      href?: string;
-      _type: 'link';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: 'span';
+          _key: string;
+        }>;
+        style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
+        listItem?: 'bullet' | 'number';
+        markDefs?: Array<{
+          href?: string;
+          _type: 'link';
+          _key: string;
+        }>;
+        level?: number;
+        _type: 'block';
+        _key: string;
+      }
     | {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-    _key: string;
-  }
+        asset?: {
+          _ref: string;
+          _type: 'reference';
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        alt?: string;
+        _type: 'image';
+        _key: string;
+      }
+    | ({
+        _key: string;
+      } & Code)
   >;
+};
+
+export type Category = {
+  _id: string;
+  _type: 'category';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
 };
 
 export type Post = {
@@ -121,54 +133,49 @@ export type Post = {
   slug?: Slug;
   content?: Array<
     | {
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
-    listItem?: 'bullet' | 'number';
-    markDefs?: Array<{
-      href?: string;
-      _type: 'link';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: 'span';
+          _key: string;
+        }>;
+        style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
+        listItem?: 'bullet' | 'number';
+        markDefs?: Array<{
+          href?: string;
+          _type: 'link';
+          _key: string;
+        }>;
+        level?: number;
+        _type: 'block';
+        _key: string;
+      }
     | {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-    _key: string;
-  }
+        asset?: {
+          _ref: string;
+          _type: 'reference';
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        alt?: string;
+        _type: 'image';
+        _key: string;
+      }
+    | ({
+        _key: string;
+      } & Code)
   >;
   excerpt?: string;
   date?: string;
-  category?: {
+  category?: Array<{
     _ref: string;
     _type: 'reference';
     _weak?: boolean;
+    _key: string;
     [internalGroqTypeReferenceTo]?: 'category';
-  };
-};
-
-export type Category = {
-  _id: string;
-  _type: 'category';
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  title?: string;
+  }>;
 };
 
 export type Slug = {
@@ -179,36 +186,39 @@ export type Slug = {
 
 export type BlockContent = Array<
   | {
-  children?: Array<{
-    marks?: Array<string>;
-    text?: string;
-    _type: 'span';
-    _key: string;
-  }>;
-  style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
-  listItem?: 'bullet' | 'number';
-  markDefs?: Array<{
-    href?: string;
-    _type: 'link';
-    _key: string;
-  }>;
-  level?: number;
-  _type: 'block';
-  _key: string;
-}
+      children?: Array<{
+        marks?: Array<string>;
+        text?: string;
+        _type: 'span';
+        _key: string;
+      }>;
+      style?: 'title' | 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote' | 'blockComment';
+      listItem?: 'bullet' | 'number';
+      markDefs?: Array<{
+        href?: string;
+        _type: 'link';
+        _key: string;
+      }>;
+      level?: number;
+      _type: 'block';
+      _key: string;
+    }
   | {
-  asset?: {
-    _ref: string;
-    _type: 'reference';
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-  };
-  hotspot?: SanityImageHotspot;
-  crop?: SanityImageCrop;
-  alt?: string;
-  _type: 'image';
-  _key: string;
-}
+      asset?: {
+        _ref: string;
+        _type: 'reference';
+        _weak?: boolean;
+        [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+      };
+      hotspot?: SanityImageHotspot;
+      crop?: SanityImageCrop;
+      alt?: string;
+      _type: 'image';
+      _key: string;
+    }
+  | ({
+      _key: string;
+    } & Code)
 >;
 
 export type Settings = {
@@ -326,6 +336,14 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
+export type Code = {
+  _type: 'code';
+  language?: string;
+  filename?: string;
+  code?: string;
+  highlightedLines?: Array<number>;
+};
+
 export type AllSanitySchemaTypes =
   | SanityImagePaletteSwatch
   | SanityImagePalette
@@ -333,8 +351,8 @@ export type AllSanitySchemaTypes =
   | SanityFileAsset
   | Geopoint
   | Project
-  | Post
   | Category
+  | Post
   | Slug
   | BlockContent
   | Settings
@@ -342,8 +360,16 @@ export type AllSanitySchemaTypes =
   | SanityImageHotspot
   | SanityImageAsset
   | SanityAssetSourceData
-  | SanityImageMetadata;
+  | SanityImageMetadata
+  | Code;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./app/(pages)/blogg/[slug]/page.tsx
+// Variable: postSlugs
+// Query: *[_type == "post" && defined(slug.current)]{"slug": slug.current}
+export type PostSlugsResult = Array<{
+  slug: string | null;
+}>;
+
 // Source: ./sanity/lib/queries.ts
 // Variable: settingsQuery
 // Query: *[_type == "settings"][0]
@@ -412,9 +438,7 @@ export type MoreStoriesQueryResult = Array<{
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: {
-    title: string | 'Uncategorized';
-  } | null;
+  category: null;
   date: string;
 }>;
 // Variable: postsQuery
@@ -425,133 +449,109 @@ export type PostsQueryResult = Array<{
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: {
-    title: string | 'Uncategorized';
-  } | null;
+  category: null;
   date: string;
 }>;
 // Variable: postQuery
 // Query: *[_type == "post" && slug.current == $slug] [0] {    content,      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
 export type PostQueryResult = {
   content: Array<
+    | ({
+        _key: string;
+      } & Code)
     | {
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'blockComment' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal' | 'title';
-    listItem?: 'bullet' | 'number';
-    markDefs?: Array<{
-      href?: string;
-      _type: 'link';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: 'span';
+          _key: string;
+        }>;
+        style?: 'blockComment' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal' | 'title';
+        listItem?: 'bullet' | 'number';
+        markDefs?: Array<{
+          href?: string;
+          _type: 'link';
+          _key: string;
+        }>;
+        level?: number;
+        _type: 'block';
+        _key: string;
+      }
     | {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-    _key: string;
-  }
+        asset?: {
+          _ref: string;
+          _type: 'reference';
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        alt?: string;
+        _type: 'image';
+        _key: string;
+      }
   > | null;
   _id: string;
   status: 'draft' | 'published';
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: {
-    title: string | 'Uncategorized';
-  } | null;
+  category: null;
   date: string;
 } | null;
-// Variable: categoryQuery
-// Query: *[_type == "category" && slug.current == $slug] {    _id,    title,    "posts": *[_type == "post" && references(^._id)] {        _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),    }  } [0]
-export type CategoryQueryResult = {
-  _id: string;
-  title: string | null;
-  posts: Array<{
-    _id: string;
-    status: 'draft' | 'published';
-    title: string | 'Untitled';
-    slug: string | null;
-    excerpt: string | null;
-    category: {
-      title: string | 'Uncategorized';
-    } | null;
-    date: string;
-  }>;
-} | null;
 // Variable: projectsQuery
-// Query: *[_type == "project" | order(date desc, _updatedAt desc)] {    _id,    title,    slug,    content,  }
+// Query: *[_type == "project" && defined(slug.current)] | order(date desc, _updatedAt desc) {    _id,    title,    "slug": slug.current,    content,  }
 export type ProjectsQueryResult = Array<{
   _id: string;
   title: string | null;
-  slug: Slug | null;
-  content: Array<
-    | {
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
-      _key: string;
-    }>;
-    style?: 'blockComment' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal' | 'title';
-    listItem?: 'bullet' | 'number';
-    markDefs?: Array<{
-      href?: string;
-      _type: 'link';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }
-    | {
-    asset?: {
-      _ref: string;
-      _type: 'reference';
-      _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
-    };
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-    _key: string;
-  }
-  > | null;
-}>;
-
-// Source: ./app/blogg/[slug]/page.tsx
-// Variable: postSlugs
-// Query: *[_type == "post" && defined(slug.current)]{"slug": slug.current}
-export type PostSlugsResult = Array<{
   slug: string | null;
+  content: Array<
+    | ({
+        _key: string;
+      } & Code)
+    | {
+        children?: Array<{
+          marks?: Array<string>;
+          text?: string;
+          _type: 'span';
+          _key: string;
+        }>;
+        style?: 'blockComment' | 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal' | 'title';
+        listItem?: 'bullet' | 'number';
+        markDefs?: Array<{
+          href?: string;
+          _type: 'link';
+          _key: string;
+        }>;
+        level?: number;
+        _type: 'block';
+        _key: string;
+      }
+    | {
+        asset?: {
+          _ref: string;
+          _type: 'reference';
+          _weak?: boolean;
+          [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+        };
+        hotspot?: SanityImageHotspot;
+        crop?: SanityImageCrop;
+        alt?: string;
+        _type: 'image';
+        _key: string;
+      }
+  > | null;
 }>;
 
 // Query TypeMap
 import '@sanity/client';
-
 declare module '@sanity/client' {
   interface SanityQueries {
+    '*[_type == "post" && defined(slug.current)]{"slug": slug.current}': PostSlugsResult;
     '*[_type == "settings"][0]': SettingsQueryResult;
     '\n  *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': MoreStoriesQueryResult;
     '\n  *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostsQueryResult;
     '\n  *[_type == "post" && slug.current == $slug] [0] {\n    content,\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostQueryResult;
-    '\n  *[_type == "category" && slug.current == $slug] {\n    _id,\n    title,\n    "posts": *[_type == "post" && references(^._id)] {\n      \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n    }\n  } [0]\n': CategoryQueryResult;
-    '\n  *[_type == "project" | order(date desc, _updatedAt desc)] {\n    _id,\n    title,\n    slug,\n    content,\n  }\n': ProjectsQueryResult;
-    '*[_type == "post" && defined(slug.current)]{"slug": slug.current}': PostSlugsResult;
+    '\n  *[_type == "project" && defined(slug.current)] | order(date desc, _updatedAt desc) {\n    _id,\n    title,\n    "slug": slug.current,\n    content,\n  }\n': ProjectsQueryResult;
   }
 }

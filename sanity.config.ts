@@ -4,7 +4,7 @@ import { visionTool } from '@sanity/vision';
 import { defineConfig, PluginOptions } from 'sanity';
 import { defineDocuments, defineLocations, type DocumentLocation, presentationTool } from 'sanity/presentation';
 import { structureTool } from 'sanity/structure';
-
+import { codeInput } from '@sanity/code-input';
 import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api';
 import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings';
 import post from '@/sanity/schemas/documents/post';
@@ -33,6 +33,7 @@ export default defineConfig({
     ],
   },
   plugins: [
+    codeInput(),
     presentationTool({
       resolve: {
         mainDocuments: defineDocuments([
