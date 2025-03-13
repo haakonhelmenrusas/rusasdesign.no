@@ -1,10 +1,15 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more om-om-meg ignoring files.
 
 # dependencies
 /node_modules
+/studio/node_modules
 /.pnp
-.pnp.js
-.yarn/install-state.gz
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -13,12 +18,14 @@
 /.next/
 /out/
 
-# production
-/build
+# sanity
+/.sanity/
+/dist/
 
 # misc
 .DS_Store
 *.pem
+.idea/
 
 # debug
 npm-debug.log*
@@ -34,3 +41,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Env files created by scripts for working locally
+.env
+.env.local
