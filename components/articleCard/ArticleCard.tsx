@@ -8,9 +8,9 @@ interface ArticleCardProps {
     status: 'draft' | 'published';
     slug: string | null;
     excerpt: string | null;
-    category: {
-      title: string;
-    } | null;
+    category: Array<{
+      title: string | 'Uncategorized';
+    }> | null;
     date: string;
   };
 }
@@ -33,9 +33,9 @@ export default async function ArticleCard({ post }: ArticleCardProps) {
           {excerpt}
         </p>
       )}
-      {category && (
-        <Category title={category.title} />
-      )}
+      {category?.map((category, key) => (
+        <Category key={key} title={category.title} />
+      ))}
     </article>
   );
 }

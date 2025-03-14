@@ -8,7 +8,7 @@ const postFields = `
   "title": coalesce(title, "Untitled"),
   "slug": slug.current,
   excerpt,
-  category->{"title": coalesce(title, "Uncategorized")},
+  category[]->{"title": coalesce(title, "Uncategorized")},
   "date": coalesce(date, _updatedAt),
 `;
 

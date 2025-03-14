@@ -25,7 +25,7 @@ export default function Category({ title }: CategoryProps) {
 
   return (
     <Link href={`/blogg?tag=${encodeURIComponent(title)}`}
-          className={`mb-4 text-sm ${renderCategoryColor()} hover:underline`}>
+          className={`mb-4 mr-2 text-sm ${renderCategoryColor()} hover:underline`}>
       #{title}
     </Link>
   );

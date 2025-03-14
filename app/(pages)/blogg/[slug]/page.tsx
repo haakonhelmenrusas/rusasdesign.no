@@ -53,9 +53,9 @@ export default async function PostPage({ params }: Props) {
           {data.title}
         </h1>
         <div className="md:mb-4 md:block">
-          {data.category && (
-            <Category title={data.category.title} />
-          )}
+          {data.category?.map((category, key) => (
+            <Category key={key} title={category.title} />
+          ))}
         </div>
         <div className="mx-auto">
           <div className="mb-6 text-lg">

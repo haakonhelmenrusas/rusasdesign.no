@@ -431,29 +431,33 @@ export type SettingsQueryResult = {
   };
 } | null;
 // Variable: moreStoriesQuery
-// Query: *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
+// Query: *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category[]->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
 export type MoreStoriesQueryResult = Array<{
   _id: string;
   status: 'draft' | 'published';
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: null;
+  category: Array<{
+    title: string | 'Uncategorized';
+  }> | null;
   date: string;
 }>;
 // Variable: postsQuery
-// Query: *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
+// Query: *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category[]->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
 export type PostsQueryResult = Array<{
   _id: string;
   status: 'draft' | 'published';
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: null;
+  category: Array<{
+    title: string | 'Uncategorized';
+  }> | null;
   date: string;
 }>;
 // Variable: postQuery
-// Query: *[_type == "post" && slug.current == $slug] [0] {    content,      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
+// Query: *[_type == "post" && slug.current == $slug] [0] {    content,      _id,  "status": select(_originalId in path("drafts.**") => "draft", "published"),  "title": coalesce(title, "Untitled"),  "slug": slug.current,  excerpt,  category[]->{"title": coalesce(title, "Uncategorized")},  "date": coalesce(date, _updatedAt),  }
 export type PostQueryResult = {
   content: Array<
     | ({
@@ -496,7 +500,9 @@ export type PostQueryResult = {
   title: string | 'Untitled';
   slug: string | null;
   excerpt: string | null;
-  category: null;
+  category: Array<{
+    title: string | 'Uncategorized';
+  }> | null;
   date: string;
 } | null;
 // Variable: projectsQuery
@@ -549,9 +555,9 @@ declare module '@sanity/client' {
   interface SanityQueries {
     '*[_type == "post" && defined(slug.current)]{"slug": slug.current}': PostSlugsResult;
     '*[_type == "settings"][0]': SettingsQueryResult;
-    '\n  *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': MoreStoriesQueryResult;
-    '\n  *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostsQueryResult;
-    '\n  *[_type == "post" && slug.current == $slug] [0] {\n    content,\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostQueryResult;
+    '\n  *[_type == "post" && _id != $skip && defined(slug.current)] | order(date desc, _updatedAt desc) [0...$limit] {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category[]->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': MoreStoriesQueryResult;
+    '\n  *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category[]->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostsQueryResult;
+    '\n  *[_type == "post" && slug.current == $slug] [0] {\n    content,\n    \n  _id,\n  "status": select(_originalId in path("drafts.**") => "draft", "published"),\n  "title": coalesce(title, "Untitled"),\n  "slug": slug.current,\n  excerpt,\n  category[]->{"title": coalesce(title, "Uncategorized")},\n  "date": coalesce(date, _updatedAt),\n\n  }\n': PostQueryResult;
     '\n  *[_type == "project" && defined(slug.current)] | order(date desc, _updatedAt desc) {\n    _id,\n    title,\n    "slug": slug.current,\n    content,\n  }\n': ProjectsQueryResult;
   }
 }
