@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 interface CategoryProps {
   title: string;
 }
@@ -26,9 +24,12 @@ export default function Category({ title }: CategoryProps) {
   }
 
   return (
-    <Link href={`/blogg?tag=${encodeURIComponent(title)}`}
-          className={`mb-4 mr-2 text-sm ${renderCategoryColor()} hover:underline`}>
+    <span className={`mb-4 mr-2 text-sm ${renderCategoryColor()}`}>
       #{title}
-    </Link>
+    </span>
+    /* <Link href={`/blogg?tag=${encodeURIComponent(title)}`}
+           className={`mb-4 mr-2 text-sm ${renderCategoryColor()} hover:underline`}>
+       #{title}
+     </Link>*/
   );
 }

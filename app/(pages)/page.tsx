@@ -23,14 +23,8 @@ export default async function Home() {
           Jeg har jobbet med alt fra små enkle nettsider til store komplekse webapplikasjoner. Jeg har også jobbet med
           design og utvikling av mobilapplikasjoner.
         </p>
-        <p className="mb-4 text-lg font-light">Om du vil lese litt i bloggen så er det
-          en <Link className="dark:text-blue-300 hover:underline" href="/blogg"
-                   aria-label="lenke til bloggen">lenke
-            her</Link> og her kan du lese litt mer om <Link className="dark:text-blue-300 hover:underline"
-                                                            href="/om-meg">meg</Link>.</p>
       </section>
-      <aside
-        className="transition-transform transform translate-x-10 opacity-0 duration-500 ease-in-out delay-500 md:translate-x-0 md:opacity-100">
+      <aside>
         <h3 className="mb-8 text-4xl font-bold leading-tight tracking-tighter md:text-4xl">
           <Link className="hover:underline" href="/blogg">Blogg</Link>
         </h3>
