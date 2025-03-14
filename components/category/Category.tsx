@@ -8,6 +8,8 @@ export default function Category({ title }: CategoryProps) {
 
   function renderCategoryColor() {
     switch (title) {
+      case 'KI':
+        return 'text-purple-500 dark:text-purple-400';
       case 'UX Design':
         return 'text-blue-500 dark:text-blue-400';
       case 'Programmering':
