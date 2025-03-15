@@ -47,7 +47,7 @@ export default async function PostPage({ params }: Props) {
     <>
       <Nav />
       <BackButton />
-      <article className="mb-6 max-w-(--breakpoint-md) mx-auto">
+      <article className="mb-6 lg:max-w-3xl mx-auto sm:px-6 lg:px-8">
         <h1
           className="text-balance mb-12 text-2xl font-medium leading-tight md:text-4xl lg:text-4xl">
           {data.title}

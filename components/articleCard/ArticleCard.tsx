@@ -19,8 +19,8 @@ export default async function ArticleCard({ post }: ArticleCardProps) {
   const { title, slug, excerpt, category } = post;
   return (
     <article
-      className="shadow-lg p-8 bg-gray-100 dark:text-gray-50 dark:bg-gray-900 rounded-md rounded-br-4xl">
-      <h3 className="text-balance mb-3 text-2xl leading-snug">
+      className="shadow-lg p-6 bg-gray-100 dark:text-gray-50 dark:bg-gray-900 rounded-md rounded-br-4xl">
+      <h3 className="text-balance mb-3 text-xl leading-snug">
         <Link href={`/blogg/${slug}`} className="hover:underline">
           {title}
         </Link>
@@ -29,7 +29,7 @@ export default async function ArticleCard({ post }: ArticleCardProps) {
         <DateComponent dateString={post.date} />
       </div>
       {excerpt && (
-        <p className="text-pretty mb-4 text-lg leading-relaxed">
+        <p className="text-pretty mb-4 text-[16] leading-relaxed">
           {excerpt}
         </p>
       )}
