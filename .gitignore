@@ -26,6 +26,7 @@
 .DS_Store
 *.pem
 .idea/
+.idea/workspace.xml
 
 # debug
 npm-debug.log*
