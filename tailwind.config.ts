@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-oswald)', 'var(--font-noto_sans)', 'Arial', 'Noto Sans', 'sans-serif'],
       },
     },
   },
