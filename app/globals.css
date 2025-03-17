@@ -30,3 +30,11 @@ code::before,
 code::after {
 	content: none;
 }
+
+html {
+	font-family: var(--font-noto_sans), serif;
+}
+
+h1 {
+	font-family: var(--font-oswald), serif;
+}

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: remove old unused nav wrapper">
+    <list default="true" id="6a5828c7-129a-4511-aa49-97255429b423" name="Changes" comment="fix: update dependencies and add workspace.xml to .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/blogg/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/blogg/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/blogg/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/blogg/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/articleCard/ArticleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/articleCard/ArticleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/date/date.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/date/date.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/moreStories/more-stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/project-setup" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,25 +67,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/haakonrusas/Prosjekter/rusasdesign.no/app/(sanity)&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.typegen.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/haakonrusas/Prosjekter/rusasdesign.no/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "feat/new-fonts",
+    "last_opened_file_path": "/Users/haakonrusas/Prosjekter/rusasdesign.no/app/(sanity)",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.typegen.executor": "Run",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "/Users/haakonrusas/Prosjekter/rusasdesign.no/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/(sanity)" />
@@ -449,7 +445,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="ci: upgrade packages" />
     <MESSAGE value="feat: full reset and restructure of the project" />
     <MESSAGE value="fix: remove AI" />
     <MESSAGE value="fix: fixing all the things" />
@@ -474,6 +469,7 @@
     <MESSAGE value="fix: query for catergories" />
     <MESSAGE value="feta: v0.9 ready" />
     <MESSAGE value="fix: remove old unused nav wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: remove old unused nav wrapper" />
+    <MESSAGE value="fix: update dependencies and add workspace.xml to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: update dependencies and add workspace.xml to .gitignore" />
   </component>
 </project>
