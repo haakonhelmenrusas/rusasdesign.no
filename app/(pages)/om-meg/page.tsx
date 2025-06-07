@@ -1,5 +1,4 @@
 import { Nav } from '@/components';
-import { Icon } from '@sanity/icons';
 
 export default async function About() {
   return (
@@ -18,7 +17,7 @@ export default async function About() {
         <div className="flex space-x-4">
           <a aria-label="LinkedIn link" href="https://www.linkedin.com/in/haakon-helmen-rusas/" target="_blank"
              rel="noreferrer noopener">
-            <Icon symbol="linkedin" width={24} height={24} />
+            <i> width={24} height={24} </i>
           </a>
         </div>
       </section>

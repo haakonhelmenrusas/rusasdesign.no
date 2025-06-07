@@ -1,8 +1,7 @@
-import PortableText from '@/components/portableText/portable-text';
 
 interface HeaderProps {
   title: string | null | undefined;
-  description: any;
+  description: string;
 }
 
 export default async function Header({ title, description }: HeaderProps) {
@@ -13,10 +12,10 @@ export default async function Header({ title, description }: HeaderProps) {
         {title || ''}
       </h1>
       <h2 className="text-lg">
-        <PortableText
-          className="prose-lg dark:text-gray-50"
-          value={description?.length ? description : ''}
-        />
+        <p
+          className="prose-lg dark:text-gray-50">
+          {description}
+        </p>
       </h2>
     </header>
   );

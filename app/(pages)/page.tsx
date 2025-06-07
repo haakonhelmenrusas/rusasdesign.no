@@ -1,18 +1,12 @@
 import { Header, MoreStories } from '@/components';
-import { sanityFetch } from '@/sanity/lib/fetch';
-import { settingsQuery } from '@/sanity/lib/queries';
 import Link from 'next/link';
 import Nav from '@/components/nav/Nav';
 
 export default async function Home() {
-  const data = await sanityFetch({
-    query: settingsQuery,
-  });
-
   return (
     <>
       <Nav />
-      <Header title={data?.title} description={data?.description} />
+      <Header title="Rusås Design" description="Web Design | Webutvikling | Apputvikling" />
       <section className="my-50">
         <h3 className="mb-8 text-4xl font-medium leading-tight tracking-tighter md:text-4xl">
           Hei, jeg er Haakon!
@@ -28,7 +22,7 @@ export default async function Home() {
         <h3 className="mb-8 text-4xl font-bold leading-tight tracking-tighter md:text-4xl">
           <Link className="hover:underline" href="/blogg">Blogg</Link>
         </h3>
-        <MoreStories skip={''} limit={2} />
+        <MoreStories />
       </aside>
     </>
   );
