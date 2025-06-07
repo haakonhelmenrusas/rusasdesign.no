@@ -4,8 +4,8 @@ import { getPostBySlug } from '@/lib/posts';
 import ReactMarkdown from 'react-markdown';
 import { BackButton, Category, DateComponent, MoreStories, Nav } from '@/components';
 
-export default async function PostPage({ params }: any) {
-  const { slug } = params;
+export default async function PostPage({ params }: {params: {slug: string}}) {
+  const { slug } = await params;
   const post = getPostBySlug(slug);
 
   if (!post) {
@@ -19,17 +19,17 @@ export default async function PostPage({ params }: any) {
       <article className="mb-6 lg:max-w-3xl mx-auto sm:px-6 lg:px-8">
         <h1
           className="text-balance mb-12 text-4xl font-medium leading-tight">
-          {post.metadata.title}
+          {post.data.title}
         </h1>
         <div className="md:mb-4 md:block">
-          {post.metadata.categories?.map((category: string, key: Key | null | undefined) => (
+          {post.data.categories?.map((category: string, key: Key | null | undefined) => (
             <Category key={key} title={category} />
           ))}
         </div>
         <div className="mx-auto">
           <div className="mb-6 text-lg">
             <div className="mb-4 text-lg">
-              <DateComponent dateString={post.metadata.created_at} />
+              <DateComponent dateString={post.data.created_at} />
             </div>
           </div>
         </div>
