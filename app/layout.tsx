@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Rusås Design blog",
+    title: "Rusås Design",
     description: "En blogg fra en web utvikler",
   };
 }
