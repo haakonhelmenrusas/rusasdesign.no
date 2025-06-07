@@ -56,5 +56,4 @@ export function getPosts(): Post[] {
     return { data, content } as Post;
   });
   return posts.sort((a, b) => new Date(b.data.created_at).getTime() - new Date(a.data.created_at).getTime());
-
 }
