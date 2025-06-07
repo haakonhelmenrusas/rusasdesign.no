@@ -1,17 +1,17 @@
 ---
 id: 001
 title: "Kode-blokk med Sanity og React"
-created_at: "2025-06-15"
+created_at: "2025-03-15"
 description: "Legg til kode i innlegg fra Sanity, og vis de i en React-komponent"
 slug: "kodeblokk-med-sanity-og-react"
 categories: 
   - programming
 ---
 
-### Intro
+## Intro
 Om du vil skrive et innlegg eller en tekst som kan publiseres fra Sanity.io sitt CMS kan du bruke dette oppsettet. Alt du trenger er å installere en plugin, et par pakker for og kunne vise koden på en fin måte og sette det hele sammen i en gjenbrukbar komponent.
 
-#### Oppsett
+## Oppsett
 
 1. Først installere vi pakkene som trengs:
 
