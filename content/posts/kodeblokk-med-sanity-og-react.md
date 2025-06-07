@@ -5,7 +5,7 @@ created_at: "2025-03-15"
 description: "Legg til kode i innlegg fra Sanity, og vis de i en React-komponent"
 slug: "kodeblokk-med-sanity-og-react"
 categories: 
-  - programming
+  - Programmering
 ---
 
 ## Intro

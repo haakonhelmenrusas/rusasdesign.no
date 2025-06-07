@@ -5,8 +5,8 @@ created_at: "2025-02-09"
 description: "En utvikler trenger sine verktøy og oppsett gjort etter et spesielt sett med tanker."
 slug: "setup-utvikling-mac"
 categories: 
-  - apple
-  - produktivitet
+  - Apple
+  - Produktivitet
 ---
 
 ## Motivasjon

@@ -18,6 +18,8 @@ export default function Category({ title }: CategoryProps) {
         return 'text-pink-500 dark:text-pink-400';
       case 'Teknologi':
         return 'text-purple-500 dark:text-purple-400';
+      case 'React':
+        return 'text-violet-500 dark:text-violet-400';
       default:
         return 'text-gray-500 dark:text-gray-400';
     }

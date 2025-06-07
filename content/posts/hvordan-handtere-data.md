@@ -5,8 +5,8 @@ created_at: "2025-05-15"
 description: "Hvordan holde orden på data når en web-applikasjon vokser"
 slug: "hvordan-handtere-data"
 categories: 
-  - programming
-  - react
+  - Programmering
+  - React
 ---
 
 ## Hvordan holde orden på dataflyten og hvorfor betyr det noe?

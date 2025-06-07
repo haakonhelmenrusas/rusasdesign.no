@@ -5,8 +5,8 @@ created_at: "2025-01-29"
 description: "Nytt verktøy som gjør deg lat eller effektiv, eller begge deler?"
 slug: "copilot-venn-eller-fiende"
 categories: 
-  - produktivitet
-  - ki
+  - Produktivitet
+  - KI
 ---
 
 ## KI - et arbeidsverktøy
