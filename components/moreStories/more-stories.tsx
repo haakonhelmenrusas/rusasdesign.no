@@ -10,7 +10,7 @@ export default async function MoreStories() {
       <div className="mb-16 grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-16 md:gap-y-16 lg:gap-x-16">
         {latestPosts?.map((post) => {
           return (
-            <ArticleCard key={post.metadata.id} metadata={post.metadata} />
+            <ArticleCard key={post.data.id} metadata={post.data} />
           );
         })}
       </div>

@@ -10,7 +10,7 @@ export function getPostBySlug(slug: string) {
 
   const { data, content } = matter(fileContents);
 
-  return { metadata: data, content };
+  return { data, content };
 }
 
 export function getLatestPosts(count = 2) {
@@ -21,10 +21,10 @@ export function getLatestPosts(count = 2) {
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(fileContents);
 
-    return { metadata: data, content };
+    return { data, content };
   });
 
-  const sortedPosts = posts.sort((a, b) => b.metadata.date - a.metadata.date);
+  const sortedPosts = posts.sort((a, b) => b.data.date - a.data.date);
 
   return sortedPosts.slice(0, count);
 }
