@@ -3,7 +3,7 @@ import { Category, DateComponent } from '@/components';
 import { Key } from 'react';
 
 export default async function ArticleCard({ metadata }: any) {
-  const { title, slug, categories, created_at } = metadata;
+  const { title, slug, categories, created_at, description } = metadata;
 
   return (
     <article
@@ -16,6 +16,11 @@ export default async function ArticleCard({ metadata }: any) {
       <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
         <DateComponent dateString={created_at} />
       </div>
+      {description && (
+        <p className="text-pretty mb-4 text-[16] leading-relaxed">
+          {description}
+        </p>
+      )}
       {categories?.map((category: string, key: Key | null | undefined) => (
         <Category key={key} title={category} />
       ))}

@@ -1,8 +1,8 @@
 ---
 id: 001
-title: "Next.js 15 & Markdown"
+title: "Kode-blokk med Sanity og React"
 created_at: "2025-06-15"
-description: "Learn how to use Markdown in Next.js with App Router."
+description: "Legg til kode i innlegg fra Sanity, og vis de i en React-komponent"
 slug: "kodeblokk-med-sanity-og-react"
 categories: 
   - programming
