@@ -2,7 +2,17 @@ import Link from 'next/link';
 import { Category, DateComponent } from '@/components';
 import { Key } from 'react';
 
-export default async function ArticleCard({ metadata }: any) {
+interface ArticleCardProps {
+  metadata: {
+    title: string;
+    description: string;
+    slug: string;
+    created_at: string;
+    categories: string[];
+  }
+}
+
+export default async function ArticleCard({ metadata }: ArticleCardProps) {
   const { title, slug, categories, created_at, description } = metadata;
 
   return (

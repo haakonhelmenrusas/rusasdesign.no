@@ -1,6 +1,6 @@
 
 export interface Post {
-  metadata: {
+  data: {
     id: string;
     title: string;
     created_at: string;
