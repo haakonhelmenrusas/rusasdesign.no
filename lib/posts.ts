@@ -48,11 +48,13 @@ export function getLatestPosts(count = 2): Post[] {
 export function getPosts(): Post[] {
   const files = fs.readdirSync(postsDirectory);
 
-  return files.map(file => {
+  const posts =  files.map(file => {
     const filePath = path.join(postsDirectory, file);
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(fileContents);
 
     return { data, content } as Post;
   });
+  return posts.sort((a, b) => new Date(b.data.created_at).getTime() - new Date(a.data.created_at).getTime());
+
 }
