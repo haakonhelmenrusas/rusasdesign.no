@@ -25,6 +25,7 @@ npm i --save-dev @types/react-syntax-highlighter
 ```
 
 Så kobler vi opp plugin med sanity.config.ts
+
 ```typescript
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
@@ -43,6 +44,7 @@ export default defineConfig({
   ],
 })
 ```
+
 Legg til en kode-seksjon i blockContent-schema, ved å legge til en ny defineArrayMember med en type for kode-blokk. Plugin vil automatisk legge til en ny knapp i grensesnittet av typen kode.
 
 ```typescript
@@ -117,7 +119,7 @@ Når du klikker på "Code" vil det dukke opp et vindu som lar deg velge språk o
 
 Nå kan vi produsere innhold med kode, så må vi lage en komponent som skal vise koden sammen med innholdet på nettsiden. Da lager vi en egen komponent som tar i bruk react-syntax-highlighter pakken. Den lar oss stilisere koden som vi ønsker, med bl.a. legge til tall for hver linje og velge fargetema.
 
-```tsx
+```typescript
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { solarizedDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
@@ -156,7 +158,7 @@ Denne pakken kommer med en god del fargetema, så om du vil redusere det digital
 
 Så kobler vi vår nye kodevisningskomponent til PortableText, som er ansvarlig for å vise innholdet som vi henter fra Sanity.
 
-```tsx
+```typescript
 import { PortableText, type PortableTextBlock, type PortableTextComponents } from 'next-sanity';
 import Code from './components/Code';
 import ImageComponent from './components/Image';
@@ -205,4 +207,5 @@ export default function CustomPortableText({ className, value }: {
   );
 }
 ```
+
 Da får vi kode skrevet ut på nettsiden vår

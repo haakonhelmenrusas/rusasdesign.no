@@ -1,8 +1,7 @@
 import { notFound } from 'next/navigation';
 import { Key, Suspense } from 'react';
 import { getPostBySlug } from '@/lib/posts';
-import ReactMarkdown from 'react-markdown';
-import { BackButton, Category, DateComponent, MoreStories, Nav } from '@/components';
+import { BackButton, Category, DateComponent, Markdown, MoreStories, Nav } from '@/components';
 
 export default async function PostPage({ params }: {params: {slug: string}}) {
   const { slug } = await params;
@@ -33,7 +32,7 @@ export default async function PostPage({ params }: {params: {slug: string}}) {
             </div>
           </div>
         </div>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+        <Markdown>{post.content}</Markdown>
       </article>
       <aside className="my-16">
         <h2 className="mb-8 text-4xl font-bold tracking-tighter md:text-4xl">

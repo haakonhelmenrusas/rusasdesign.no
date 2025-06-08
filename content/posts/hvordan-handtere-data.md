@@ -23,7 +23,7 @@ Ved å benytte seg av TypeScript i prosjekter så kan man lettere holde orden og
 applikasjonen har den strukturen man forventer. Man får også en bedre opplevelse når man utvikler ved at kode-editoren gir deg 
 hjelp underveis med hint om hvordan en struktur ser ut, og om du har brukt det feil.
 
-```tsx
+```typescript
 import { useState } from 'react';
 
 interface User {
@@ -41,7 +41,7 @@ const [user, setUser] = useState<User>({
 
 For å oppdatere data må man ta med resten av objektet, før man kan selektivt oppdatere noe av dataen:
 
-```tsx
+```typescript
 /**
 * Her må funksjonens signatur følge samme datatype i argumentet som det objektet den vil gjøre endring på.
 */
@@ -54,7 +54,7 @@ const updateUserName = (newName: string) => {
 
 Når du har to komponenter som bruker eller er avhengige av den samme data, bør du vurdere å flytte dataene ut av komponentene, opp til den nærmeste overordnede komponenten, og deretter sende data ned , samt eventuelt en funksjon for å endre tilstanden, til komponentene under i hierarkiet.
 
-```tsx
+```typescript
 import { useState } from 'react';
 
 /**
@@ -97,7 +97,7 @@ Hvis en skjema-komponent inneholder mer enn noen få useState-kall, kan administ
 tilstandslogikken raskt bli for kompleks. Ved å bruke en useReducer-hook kan vi samle tilstandslogikken på ett 
 sted og kun kalle funksjonen for å endre tilstanden i UI-komponenten. Dette gjør at vi kan gjøre skjema komponenten enklere, mindre og lettere å teste.
 
-```tsx
+```typescript
 import { useReducer } from 'react';
 
 interface FeedbackFormState {
@@ -153,7 +153,7 @@ export const useFeedbackForm = () => {
 
 Ved å bruke Reacts Context API kan vi lagre tilstand på hvilket som helst nivå i appen vår, og komponenter kan hente tilstand uten å sende props nedover flere nivåer.
 
-```tsx
+```typescript
 import { createContext } from 'react';
 import { User } from './types';
 

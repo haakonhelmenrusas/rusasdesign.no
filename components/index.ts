@@ -7,3 +7,4 @@ export { default as Nav } from './nav/Nav';
 export { default as ArticleCard } from './articleCard/ArticleCard';
 export { default as BackButton } from './backButton/BackButton';
 export { default as Loading } from './loading/Loading';
+export { default as Markdown } from './markdown/Markdown';

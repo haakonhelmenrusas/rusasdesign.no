@@ -48,21 +48,22 @@ Her er en liste med programmer jeg bruker
 - 
 #### Kjør kommando
 
-```
+```bash
 ## Shell Programs
 brew install git
 
 # GUI programs
 brew install --cask \
-  visual-studio-code \
+  rider \
   google-chrome \
-  firefox \
+  vivaldi \
   docker \
   slack \
   spotify \
   anytype \
   postman \
   xcode \
+  android-studio \
   webstorm
 ```
 
