@@ -3,7 +3,8 @@ import { Key, Suspense } from 'react';
 import { getPostBySlug } from '@/lib/posts';
 import { BackButton, Category, DateComponent, Markdown, MoreStories, Nav } from '@/components';
 
-export default async function PostPage({ params }: {params: {slug: string}}) {
+// @ts-ignore
+export default async function PostPage({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
