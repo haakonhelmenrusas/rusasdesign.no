@@ -45,7 +45,7 @@ Her er en liste med programmer jeg bruker
 - Docker - utvikling med konteinere f.eks. postgres
 - Postman - API-verktøy
 - AnyType - alt av notater
-- 
+
 #### Kjør kommando
 
 ```bash
@@ -108,12 +108,11 @@ Med den siste linjen så vil du kunne skrive "git push" i en "branch" uten å m�
 Jeg liker å ha det ganske minimalt på skriverbordet og i menyene, så dette er noe av de innstillingene jeg setter opp
 - skjuler docken - så jeg får mer plass på skrivebordet til programmene som kjører
 - fjerner unødvendige mapper og innstillinger i Finder-vinduet
-    - jeg pleier bare å ha
-        - Apper
-        - Dokumenter
-        - Nedlastninger
-        - "home"-mappen
-        - eksterne HDD og skylagring
+    - Apper
+    - Dokumenter
+    - Nedlastninger
+    - "home"-mappen
+    - eksterne HDD og skylagring
 - setter et mørkt tema på OS-et
 - setter Vivaldi, eller din foretrukne nettleser til standard
 

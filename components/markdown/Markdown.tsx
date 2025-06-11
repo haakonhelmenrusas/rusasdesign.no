@@ -63,9 +63,9 @@ export default async function Markdown({ children }: MarkdownProps) {
     img: ({ alt, src, ...props }) => {
       return <ImageNode alt={alt} src={src as string} {...props} />;
     },
-    li: ({ children, ...props }) => <li {...props} className="mb-2 dark:text-gray-50">{children}</li>,
-    ol: ({ children, ...props }) => <ol {...props} className="mb-4 dark:text-gray-50">{children}</ol>,
-    ul: ({ children, ...props }) => <ul {...props} className="mb-2 mt-0 dark:text-gray-50">{children}</ul>,
+    li: ({ children, ...props }) => <li {...props} className="mb-2 dark:text-gray-50 list-disc">{children}</li>,
+    ol: ({ children, ...props }) => <ol {...props} className="pl-6 mb-4 dark:text-gray-50">{children}</ol>,
+    ul: ({ children, ...props }) => <ul {...props} className="pl-6 mb-4 mt-0 dark:text-gray-50">{children}</ul>,
     pre: ({ children, ...props }) => <pre {...props}>{children}</pre>,
   };
 
