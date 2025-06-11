@@ -1,22 +1,20 @@
 import Link from 'next/link';
 import { Category, DateComponent } from '@/components';
+import { Key } from 'react';
 
 interface ArticleCardProps {
-  post: {
-    _id: string;
+  metadata: {
     title: string;
-    status: 'draft' | 'published';
-    slug: string | null;
-    excerpt: string | null;
-    category: Array<{
-      title: string | 'Uncategorized';
-    }> | null;
-    date: string;
-  };
+    description: string;
+    slug: string;
+    created_at: string;
+    categories: string[];
+  }
 }
 
-export default async function ArticleCard({ post }: ArticleCardProps) {
-  const { title, slug, excerpt, category } = post;
+export default async function ArticleCard({ metadata }: ArticleCardProps) {
+  const { title, slug, categories, created_at, description } = metadata;
+
   return (
     <article
       className="shadow-lg p-6 bg-gray-100 dark:text-gray-50 dark:bg-gray-900 rounded-md rounded-br-4xl">
@@ -26,15 +24,15 @@ export default async function ArticleCard({ post }: ArticleCardProps) {
         </Link>
       </h3>
       <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-        <DateComponent dateString={post.date} />
+        <DateComponent dateString={created_at} />
       </div>
-      {excerpt && (
+      {description && (
         <p className="text-pretty mb-4 text-[16] leading-relaxed">
-          {excerpt}
+          {description}
         </p>
       )}
-      {category?.map((category, key) => (
-        <Category key={key} title={category.title} />
+      {categories?.map((category: string, key: Key | null | undefined) => (
+        <Category key={key} title={category} />
       ))}
     </article>
   );

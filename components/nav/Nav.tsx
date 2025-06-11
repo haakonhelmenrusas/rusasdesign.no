@@ -12,20 +12,6 @@ export default function Nav() {
       <Link href={currentPath === '/' ? '#' : '/'} className="mr-auto">
         <Image src="/assets/logo.png" alt="Logo" width={56} height={56} />
       </Link>
-      {/*<ul className="flex items-center space-x-4">
-        <li>
-          <Link href="/blogg"
-                className={`text-lg font-light hover:underline ${currentPath === '/blogg' ? 'underline' : ''}`}>
-            Blogg
-          </Link>
-        </li>
-        <li>
-          <Link href="/om-meg"
-                className={`text-lg font-light hover:underline ${currentPath === '/om-om-meg' ? 'underline' : ''}`}>
-            Om meg
-          </Link>
-        </li>
-      </ul>*/}
     </nav>
   );
 }

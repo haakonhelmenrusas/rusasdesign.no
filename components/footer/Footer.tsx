@@ -1,20 +1,18 @@
-import { PortableText } from '@/components';
-import type { PortableTextBlock } from 'next-sanity';
-
-interface FooterProps {
-  footer?: any[];
-}
-
-export default function Footer({ footer }: FooterProps) {
+export default function Footer() {
   return (
-    <footer className="bg-gray-200 dark:text-gray-50 dark:bg-gray-800 border-accent-2 mt-auto">
-      <div className="container mx-auto px-5">
-        {footer && footer.length > 0 ? (
-          <PortableText
-            className="prose-sm dark:text-gray-50 bottom-0 w-full max-w-none py-3 text-center md:py-10"
-            value={footer as PortableTextBlock[]}
-          />
-        ) : null}
+    <footer className="grow max-w-[420] lg:max-w-(--breakpoint-lg) mx-auto bg-gray-200 dark:text-gray-50 dark:bg-gray-800 border-accent-2 p-8">
+        <p className="text-m font-medium">
+          &copy; 2025 Rusås Design
+        </p>
+      <div className="flex items-center justify-center gap-4 w-full">
+        <a aria-label="LinkedIn link" href="https://www.linkedin.com/in/haakon-helmen-rusas/" target="_blank"
+           rel="noreferrer noopener">
+          LinkedIn
+        </a>
+        <a aria-label="Github link" href="https://github.com/haakonhelmenrusas" target="_blank"
+           rel="noreferrer noopener">
+          Github
+        </a>
       </div>
     </footer>
   );
