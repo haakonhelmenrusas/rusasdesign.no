@@ -1,58 +1,88 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2a70f8ca-927e-4044-9a94-6abfc460a345/deploy-status)](https://app.netlify.com/sites/rusasdesign/deploys)
 
-# Rusås Design homepage and blog
+# Rusås Design — Homepage and Blog
 
-This is the source code for the Rusås Design homepage and blog. It is built with Next.js and Sanity.io.
+This repository contains the source for the Rusås Design homepage and blog. It’s a fast, content-focused site powered by
+Next.js with Markdown-based posts, styled with Tailwind CSS, and deployed on Netlify.
 
-## Development
+## Overview
 
-To run the project locally, you need to have Node.js installed. You can download it
-from [nodejs.org](https://nodejs.org/).
+- Markdown-first authoring for posts and pages
+- Static generation for speed, with server capabilities where needed
+- Clean, responsive typography and code highlighting for a better reading experience
+- Zero back-end maintenance for content: write Markdown, commit, and deploy
 
-1. Clone the repository:
+## Tech stack
 
-```bash
-git clone
-```
+- Framework: Next.js (React 19)
+- Language: TypeScript
+- UI: Tailwind CSS (with Typography plugin)
+- Markdown: gray-matter (frontmatter) + react-markdown (rendering) + remark-gfm (GitHub-flavored Markdown)
+- Code blocks: react-syntax-highlighter
+- Dates/utilities: date-fns
+- Tooling: ESLint (eslint-config-next)
+- Deployment: Netlify
 
-2. Install the dependencies:
+## How it works
 
-```bash
-npm install
-```
+- Content authoring
+    - Posts/pages are written in Markdown with YAML frontmatter (title, date, etc.) parsed via gray-matter.
+    - Markdown is rendered with react-markdown and enhanced by remark-gfm for tables, strikethrough, and other GFM
+      features.
+    - Code blocks are highlighted using react-syntax-highlighter.
 
-3. Run the development server:
+- Site rendering
+    - Next.js handles routing and rendering. Static generation is used where possible for performance and reliability.
+    - TypeScript ensures type-safety across components and utilities.
 
-```bash
-npm run dev
-```
+- Styling
+    - Tailwind CSS provides utility-first styling.
+    - The Typography plugin refines long-form content and blog readability.
 
-The project should now be running on [http://localhost:3000](http://localhost:3000).
+- Deployment
+    - Netlify builds and deploys the site on pushes to the main branch (see badge above for status).
 
-```bash
-npm run typegen
-```
+## Getting started
 
-#### Creating a read token
+Prerequisites
 
-This far your `.env.local` file should have values for `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET`.
-Before you can run the project you need to setup a read token (`SANITY_API_READ_TOKEN`), it's used for authentication
-when Sanity Studio is live previewing your application.
+- Node.js 22+
+- npm
 
-1. Go to [manage.sanity.io](https://manage.sanity.io/) and select your project.
-2. Click on the `🔌 API` tab.
-3. Click on `+ Add API token`.
-4. Name it "next blog live preview read token" and set `Permissions` to `Viewer` and hit `Save`.
-5. Copy the token and add it to your `.env.local` file.
+1) Clone the repository `git clone https://github.com/rusas/rusasdesign.git`
+2) Install dependencies: `npm install`
+3) Run the development server: `npm run dev`
 
-```bash
-SANITY_API_READ_TOKEN="<paste your token here>"
-```
+The site will be available at http://localhost:3000.
 
-Your `.env.local` file should look something like this:
+## Scripts
 
-```bash
-NEXT_PUBLIC_SANITY_PROJECT_ID="r0z1eifg"
-NEXT_PUBLIC_SANITY_DATASET="blog-vercel"
-SANITY_API_READ_TOKEN="sk..."
-```
+- Development: `npm run dev`
+- Production build: `npm run build`
+- Start production server: `npm run start`
+- Lint: `npm run lint`
+
+## Deployment
+
+This project is deployed on Netlify.
+
+- Connect the repository in Netlify
+- Build command: `next build`
+- Start command (for Netlify adapters/environments that run a server) or use the default Next.js output handling
+  configured by Netlify
+- Environment variables (if any) should be configured in the Netlify dashboard
+
+## Contributing
+
+This project is open source for transparency and learning, but it is not currently accepting external contributions or
+pull requests.
+
+- Issues and PRs may be closed without review.
+- You are welcome to fork the repository under the terms of the license.
+
+## License and copyright
+
+Copyright © Rusås Design. All rights are reserved unless otherwise noted.
+
+This repository is provided under the terms described in the LICENSE file included with the source. If you did not
+receive a copy of the license, please contact the author.
