@@ -32,8 +32,18 @@ export default async function Markdown({ children }: MarkdownProps) {
         {children}
       </a>
     ),
-    code: ({ className, children, ...props }) =>
-      className ? <CodeBlock className={className}>{children}</CodeBlock> : renderInlineCode({ children, ...props }),
+    code: ({ className, children, ...props }) => {
+      if (!className) {
+        return renderInlineCode({ children, ...props });
+      }
+
+      const match = /language-([\w-]+)/.exec(className || '');
+      const language = match?.[1] || 'plaintext';
+      const code = String(children ?? '').replace(/\n$/, '');
+
+      return <CodeBlock language={language}>{code}</CodeBlock>;
+    },
+
     p: ({ children, ...props }) => <p {...props} className="mb-4 dark:text-gray-50">{children}</p>,
     h1: ({ children }) => (
       <h1 className="mb-4 text-3xl font-semibold dark:text-gray-50">{children}</h1>
@@ -71,5 +81,5 @@ export default async function Markdown({ children }: MarkdownProps) {
 
   return (
     <ReactMarkdown components={renderers} remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
-  )
+  );
 }

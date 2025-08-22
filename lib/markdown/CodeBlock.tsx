@@ -3,8 +3,6 @@
 import React from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-// Languages (register only what you use to keep bundle small)
 import ts from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 import js from 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
@@ -21,7 +19,7 @@ SyntaxHighlighter.registerLanguage('css', css);
 
 interface CodeBlockProps {
   children: string;
-  language?: string; // e.g. 'typescript', 'tsx', 'javascript', 'json', 'bash', 'css'
+  language?: string;
 }
 
 export default function CodeBlock({ children, language = 'javascript' }: CodeBlockProps) {

@@ -2,114 +2,16 @@ import { notFound } from 'next/navigation';
 import { getPostBySlug } from '@/lib/posts';
 import { Badge } from '@/components/badge/Badge';
 import RelatedPosts from '@/components/relatedPosts/RelatedPosts';
-import CodeBlock from '@/lib/markdown/CodeBlock';
 import { ArrowLeft, Calendar } from 'lucide-react';
-import { JSX } from 'react';
 import { format } from 'date-fns';
 import { nb } from 'date-fns/locale/nb';
 import Link from 'next/link';
+import Markdown from '@/components/markdown/Markdown';
 
 //@ts-ignore
 export default async function BlogPost({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-
-  const renderContent = (content: string) => {
-    const lines = content.split('\n');
-    const elements: JSX.Element[] = [];
-    let currentCodeBlock = '';
-    let inCodeBlock = false;
-    let codeLanguage = '';
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      if (line.startsWith('```')) {
-        if (inCodeBlock) {
-          // End of code block
-          elements.push(
-            <div key={i} className="post-spacing">
-              <CodeBlock language={codeLanguage}>
-                {currentCodeBlock.trim()}
-              </CodeBlock>
-            </div>,
-          );
-          currentCodeBlock = '';
-          inCodeBlock = false;
-          codeLanguage = '';
-        } else {
-          // Start of code block
-          codeLanguage = line.slice(3).trim() || 'javascript';
-          inCodeBlock = true;
-        }
-        continue;
-      }
-
-      if (inCodeBlock) {
-        currentCodeBlock += line + '\n';
-        continue;
-      }
-
-      if (line.startsWith('# ')) {
-        elements.push(
-          <h1 key={i} className="text-3xl md:text-4xl font-black leading-tight tracking-tight post-spacing">
-            {line.slice(2)}
-          </h1>,
-        );
-      } else if (line.startsWith('## ')) {
-        elements.push(
-          <h2 key={i} className="text-2xl md:text-3xl font-bold leading-tight tracking-tight post-spacing">
-            {line.slice(3)}
-          </h2>,
-        );
-      } else if (line.startsWith('### ')) {
-        elements.push(
-          <h3 key={i} className="text-xl md:text-2xl font-bold leading-tight post-spacing">
-            {line.slice(4)}
-          </h3>,
-        );
-      } else if (line.startsWith('- ')) {
-        // Simple list item handling
-        elements.push(
-          <li key={i} className="ml-4 mb-2 text-base md:text-lg text-muted-foreground leading-relaxed font-medium">
-            {line.slice(2)}
-          </li>,
-        );
-      } else if (line.trim() === '') {
-        elements.push(<div key={i} className="h-4" />);
-      } else if (line.startsWith('**') && line.endsWith('**')) {
-        elements.push(
-          <p key={i} className="text-lg md:text-xl font-black post-spacing">
-            {line.slice(2, -2)}
-          </p>,
-        );
-      } else if (line.includes('`') && !line.startsWith('```')) {
-        // Inline code
-        const parts = line.split('`');
-        const rendered = parts.map((part, idx) =>
-          idx % 2 === 1 ?
-            <code key={idx}
-                  className="bg-primary/10 text-primary px-2 py-1 rounded-md text-sm md:text-base font-bold border border-primary/20">
-              {part}
-            </code> :
-            part,
-        );
-        elements.push(
-          <p key={i} className="text-base md:text-lg leading-relaxed post-spacing">
-            {rendered}
-          </p>,
-        );
-      } else if (line.trim()) {
-        elements.push(
-          <p key={i} className="text-base md:text-lg leading-relaxed font-medium post-spacing">
-            {line}
-          </p>,
-        );
-      }
-    }
-
-    return elements;
-  };
 
   if (!post) {
     return notFound();
@@ -154,7 +56,7 @@ export default async function BlogPost({ params }) {
       </div>
       <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-xl large-spacing">
         <div className="prose prose-gray max-w-none">
-          {renderContent(post.content)}
+          <Markdown>{post.content}</Markdown>
         </div>
       </div>
       <RelatedPosts
