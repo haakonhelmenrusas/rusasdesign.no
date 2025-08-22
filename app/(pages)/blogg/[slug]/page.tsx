@@ -45,9 +45,7 @@ export default async function BlogPost({ params }) {
             <Badge
               key={tag}
               variant="secondary"
-              className="px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-bold cursor-pointer transition-all duration-300
-                        hover:scale-110 hover:bg-accent hover:text-accent-foreground border-2 border-border
-                        hover:border-accent"
+              className="px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-bold border-2 border-border"
             >
               {tag}
             </Badge>
