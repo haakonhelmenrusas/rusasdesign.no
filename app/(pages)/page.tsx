@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="container max-w-7xl mx-auto py-10 md:py-20 px-4 md:px-8">
+      <header className="container max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8">
         <div className="text-center mega-spacing">
           <div className="mb-8 md:mb-12 flex justify-center">
             <div

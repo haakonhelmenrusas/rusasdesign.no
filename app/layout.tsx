@@ -26,8 +26,7 @@ const notoSans = Noto_Sans({
 
 export default async function RootLayout({ children }: { children: ReactNode; }) {
   return (
-    <html lang="no-nb"
-          className={`${oswald.variable} ${notoSans.variable} bg-gray-200 dark:text-gray-50 dark:bg-gray-800 text-black h-full`}>
+    <html lang="no-nb" className={`${oswald.variable} ${notoSans.variable}`}>
     <body className="min-h-screen flex flex-col">
     <ClarityInit />
     {children}

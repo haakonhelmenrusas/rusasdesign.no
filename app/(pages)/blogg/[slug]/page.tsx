@@ -18,7 +18,7 @@ export default async function BlogPost({ params }) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto">
+    <article className="container max-w-4xl mx-auto px-4 md:px-8">
       <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-2xl large-spacing">
         <Link
           href="/"

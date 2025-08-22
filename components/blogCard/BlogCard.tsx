@@ -38,7 +38,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
                  transform-gpu will-change-transform overflow-hidden`}
       onClick={() => router.push(`/blogg/${post.data.slug}`)}
     >
-      <div className="flex items-center gap-3 text-muted-foreground mb-6 text-lg">
+      <div className="flex items-center gap-3 text-foreground/80 mb-4 text-lg">
         <Calendar className="w-5 h-5" />
         <span className="font-medium">{formatDate(post.data.created_at)}</span>
       </div>
@@ -46,7 +46,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
                      transition-colors duration-300 tracking-tight">
         {post.data.title}
       </h3>
-      <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+      <p className="text-foreground/80 mb-6 md:mb-8 leading-relaxed text-base md:text-lg font-medium">
         {post.data.slug}
       </p>
       <div className="flex flex-wrap gap-3">
