@@ -1,22 +1,30 @@
-import { Github, Linkedin, Palette } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/button/Button';
 import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="border-t-4 border-primary bg-gradient-to-r from-card to-muted/20 mt-16 md:mt-32">
       <div className="container max-w-7xl mx-auto py-8 md:py-16 px-4 md:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12 md:items-center">
-          <div className="flex items-center justify-center md:justify-start gap-4">
-            <div
-              className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
-              <Palette className="w-5 h-5 md:w-6 md:h-6 text-white" />
+          <div
+            className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-3 md:gap-4">
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/assets/logo.png"
+                alt="Rusås Design logo"
+                fill
+                className="object-contain"
+                priority={false}
+              />
             </div>
             <div className="text-center md:text-left">
               <h3 className="text-xl md:text-2xl font-black">Rusås Design</h3>
               <p className="text-muted-foreground font-medium text-sm md:text-base">Skaper digitale opplevelser</p>
             </div>
           </div>
+
           <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-6 order-3 md:order-2">
             <Button
               variant="ghost"

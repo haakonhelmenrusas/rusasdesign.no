@@ -1,7 +1,8 @@
-import { Palette, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { getPosts } from '@/lib/posts';
 import { FilterProvider } from '@/context/FilterContext';
 import FilterablePosts from '@/components/filterablePosts/FilterablePosts';
+import Image from 'next/image';
 
 export default function Home() {
   const allBlogPosts = getPosts();
@@ -11,16 +12,20 @@ export default function Home() {
       <header className="container max-w-7xl mx-auto py-10 md:py-20 px-4 md:px-8">
         <div className="text-center mega-spacing">
           <div className="mb-8 md:mb-12 flex justify-center">
-            <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-primary via-accent to-destructive
-                           rounded-2xl md:rounded-3xl flex items-center justify-center group hover:scale-110
-                           transition-all duration-500 shadow-2xl hover:shadow-primary/25
-                           hover:rotate-3 transform-gpu">
-              <Palette
-                className="w-12 h-12 md:w-16 md:h-16 text-white group-hover:rotate-12 transition-transform duration-500" />
+            <div
+              className="w-24 h-24 md:w-32 md:h-32 rounded-2xl md:rounded-3xl relative overflow-hidden shadow-2xl transform-gpu"
+            >
+              <Image
+                src="/assets/logo.png"
+                alt="Rusås Design"
+                fill
+                className="object-contain hover:rotate-12 transition-transform duration-500"
+                priority
+              />
             </div>
           </div>
-          <div className="hero-text bg-gradient-to-r from-primary via-accent to-destructive
-                          bg-clip-text text-transparent mb-6 md:mb-8 tracking-tight">
+
+          <div className="hero-text text-4xl md:text-6xl text-white leading-tight mb-6 md:mb-8 tracking-tight">
             Rusås Design
           </div>
           <div className="max-w-4xl mx-auto huge-spacing px-4">
