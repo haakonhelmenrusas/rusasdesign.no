@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Palette } from 'lucide-react';
+import { Github, Linkedin, Palette } from 'lucide-react';
 import { Button } from '@/components/button/Button';
 import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
 
@@ -50,23 +50,6 @@ export default function Footer() {
               >
                 <Linkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" />
                 LinkedIn
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="default"
-              className="hover:scale-105 md:hover:scale-110 transition-all duration-300 hover:bg-destructive
-                      hover:text-destructive-foreground font-bold border-2 border-transparent
-                      hover:border-destructive text-sm md:text-lg px-4 md:px-6 py-2 md:py-3 w-full sm:w-auto"
-              asChild
-            >
-              <a
-                href="mailto:kontakt@rusåsdesign.no"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mail className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" />
-                Contact
               </a>
             </Button>
           </div>

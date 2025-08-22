@@ -1,5 +1,4 @@
 import { Palette, Sparkles } from 'lucide-react';
-import Footer from '@/components/footer/Footer';
 import { getPosts } from '@/lib/posts';
 import { FilterProvider } from '@/context/FilterContext';
 import FilterablePosts from '@/components/filterablePosts/FilterablePosts';
@@ -48,9 +47,7 @@ export default function Home() {
         <FilterProvider>
           <FilterablePosts posts={allBlogPosts} />
         </FilterProvider>
-
       </main>
-      <Footer />
     </div>
   );
 }
