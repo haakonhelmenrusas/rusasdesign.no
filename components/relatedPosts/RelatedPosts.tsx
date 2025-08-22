@@ -23,7 +23,7 @@ export default function RelatedPosts({ currentPost }: RelatedPostsProps) {
   return (
     <section className="mt-16 pt-12 border-t border-border">
       <div className="mb-8">
-        <h2 className="mb-3">Related Posts</h2>
+        <h2 className="mb-3">Andre artikler</h2>
         <p className="text-muted-foreground">
           Fortsett lese om lignende emner
         </p>
