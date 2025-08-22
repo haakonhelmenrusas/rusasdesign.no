@@ -65,8 +65,6 @@ export default function Footer() {
             <ThemeToggle />
             <p className="text-muted-foreground font-medium text-center md:text-right text-sm md:text-base">
               © 2025 Rusås Design
-              <br />
-              <span className="font-bold">Bygger digitale opplevelser</span>
             </p>
           </div>
         </div>

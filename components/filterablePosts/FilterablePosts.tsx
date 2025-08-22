@@ -30,7 +30,7 @@ export default function FilterablePosts({ posts }: Props) {
     <>
       <div className="large-spacing">
         <div className="mb-6 md:mb-8">
-          <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-foreground">Filter by Topic</h3>
+          <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-foreground">Les etter tema</h3>
           <div className="flex flex-wrap gap-2 md:gap-4">
             {allTags.map((tag) => (
               <Badge
@@ -55,7 +55,7 @@ export default function FilterablePosts({ posts }: Props) {
           <div
             className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-xl border-2 border-border">
             <span className="text-base md:text-lg font-bold text-foreground">
-              Filtered by: <span className="text-primary">{selectedTag}</span>
+              Filtrert på: <span className="text-primary">{selectedTag}</span>
             </span>
             <Button
               variant="ghost"
@@ -64,7 +64,7 @@ export default function FilterablePosts({ posts }: Props) {
               className="hover:bg-destructive hover:text-destructive-foreground font-bold text-sm md:text-base"
             >
               <X className="w-4 h-4 mr-2" />
-              Clear Filter
+              Fjern filter
             </Button>
           </div>
         )}
@@ -86,14 +86,14 @@ export default function FilterablePosts({ posts }: Props) {
         <div className="text-center bold-spacing bg-card border-2 border-border rounded-xl shadow-xl">
           <h3 className="text-2xl md:text-3xl font-black mb-4">No Posts Found</h3>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 md:mb-8">
-            No posts found with the tag &#34;{selectedTag}&#34;
+            Ingen innlegg funnet med dette tema &#34;{selectedTag}&#34;
           </p>
           <Button
             onClick={clear}
             size="lg"
             className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto"
           >
-            Clear Filter
+            Fjern filter og vis alle innlegg
           </Button>
         </div>
       )}
