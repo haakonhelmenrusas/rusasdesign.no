@@ -1,4 +1,4 @@
-import { Footer } from '@/components';
+import Footer from '@/components/footer/Footer';
 import { ReactNode } from 'react';
 
 export default async function Layout({ children }: { children: ReactNode; }) {

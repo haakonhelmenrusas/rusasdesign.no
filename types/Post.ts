@@ -1,4 +1,3 @@
-
 export interface Post {
   data: {
     id: string;
@@ -6,7 +5,7 @@ export interface Post {
     created_at: string;
     description: string;
     slug: string;
-    categories: string[];
-  }
+    tags: string[];
+  };
   content: string;
 }
