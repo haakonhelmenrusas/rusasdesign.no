@@ -3,11 +3,12 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Noto_Sans, Oswald } from 'next/font/google';
 import { ReactNode } from 'react';
+import { ClarityInit } from '@/lib/ClarityInit';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Rusås Design",
-    description: "En blogg fra en web utvikler",
+    title: 'Rusås Design',
+    description: 'En blogg fra en web utvikler',
   };
 }
 
@@ -28,6 +29,7 @@ export default async function RootLayout({ children }: { children: ReactNode; })
     <html lang="no-nb"
           className={`${oswald.variable} ${notoSans.variable} bg-gray-200 dark:text-gray-50 dark:bg-gray-800 text-black h-full`}>
     <body className="min-h-screen flex flex-col">
+    <ClarityInit />
     {children}
     </body>
     </html>
