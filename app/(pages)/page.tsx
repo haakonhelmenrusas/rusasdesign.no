@@ -25,7 +25,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-text text-4xl md:text-6xl text-white leading-tight mb-8 md:mb-12 tracking-tight">
+          <div className="hero-text text-4xl md:text-6xl text-foreground leading-tight mb-8 md:mb-12 tracking-tight">
             Rusås Design
           </div>
           <div className="max-w-4xl mx-auto huge-spacing px-4">
