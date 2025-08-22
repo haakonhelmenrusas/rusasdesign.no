@@ -22,11 +22,11 @@ export default async function BlogPost({ params }) {
       <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-2xl large-spacing">
         <Link
           href="/"
-          className="mb-4 md:mb-6 hover:-translate-x-2 transition-all duration-300 font-bold text-base md:text-lg px-4 md:px-6 py-2 md:py-3
+          className="mb-4 md:mb-6 hover:-translate-x-2 rounded-2xl inline-flex items-center w-fit transition-all duration-300 font-bold text-base md:text-lg px-4 md:px-6 py-2 md:py-3
                     hover:bg-primary hover:text-primary-foreground"
         >
           <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" />
-          Back to Blog
+          Tilbake
         </Link>
 
         <div className="flex items-center gap-3 md:gap-4 text-muted-foreground mb-4 md:mb-6 text-base md:text-lg">
