@@ -14,7 +14,7 @@ code::after {
 }
 
 html {
-	font-family: var(--font-noto_sans), serif;
+	font-family: var(--font-noto-sans), serif;
 }
 
 h1 {

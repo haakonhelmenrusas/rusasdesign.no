@@ -1,10 +1,10 @@
 'use client';
 
+import { Calendar } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { Badge } from '@/components/badge/Badge';
-import { Calendar } from 'lucide-react';
 import { Post } from '@/types/Post';
-import { useRouter } from 'next/navigation';
 
 interface BlogCardProps {
   post: Post;

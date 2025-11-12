@@ -1,8 +1,8 @@
 import { Pen } from 'lucide-react';
-import { getPosts } from '@/lib/posts';
-import { FilterProvider } from '@/context/FilterContext';
-import FilterablePosts from '@/components/filterablePosts/FilterablePosts';
 import Image from 'next/image';
+import FilterablePosts from '@/components/filterablePosts/FilterablePosts';
+import { FilterProvider } from '@/context/FilterContext';
+import { getPosts } from '@/lib/posts';
 
 export default function Home() {
   const allBlogPosts = getPosts();

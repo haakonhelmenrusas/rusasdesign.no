@@ -9,6 +9,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Rusås Design',
     description: 'En blogg fra en web utvikler',
+    metadataBase: new URL('https://rusasdesign.no'),
+    openGraph: {
+      title: 'Rusås Design',
+      description: 'En blogg fra en web utvikler',
+      url: 'https://rusasdesign.no',
+      siteName: 'Rusås Design',
+      locale: 'no_NO',
+      type: 'website',
+    }
   };
 }
 
@@ -19,18 +28,18 @@ const oswald = Oswald({
 });
 
 const notoSans = Noto_Sans({
-  variable: '--font-noto_sans',
+  variable: '--font-noto-sans',
   subsets: ['latin'],
   display: 'swap',
 });
 
 export default async function RootLayout({ children }: { children: ReactNode; }) {
   return (
-    <html lang="no-nb" className={`${oswald.variable} ${notoSans.variable}`}>
-    <body className="min-h-screen flex flex-col">
-    <ClarityInit />
-    {children}
-    </body>
+    <html lang="nb-NO" className={`${oswald.variable} ${notoSans.variable}`}>
+      <body className="antialiased min-h-screen flex flex-col">
+        <ClarityInit />
+          {children}
+      </body>
     </html>
   );
 }

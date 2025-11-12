@@ -1,12 +1,12 @@
-import { notFound } from 'next/navigation';
-import { getPostBySlug } from '@/lib/posts';
-import { Badge } from '@/components/badge/Badge';
-import RelatedPosts from '@/components/relatedPosts/RelatedPosts';
-import { ArrowLeft, Calendar } from 'lucide-react';
 import { format } from 'date-fns';
 import { nb } from 'date-fns/locale/nb';
+import { ArrowLeft, Calendar } from 'lucide-react';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Badge } from '@/components/badge/Badge';
 import Markdown from '@/components/markdown/Markdown';
+import RelatedPosts from '@/components/relatedPosts/RelatedPosts';
+import { getPostBySlug } from '@/lib/posts';
 
 //@ts-ignore
 export default async function BlogPost({ params }) {

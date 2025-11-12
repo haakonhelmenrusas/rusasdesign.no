@@ -1,7 +1,7 @@
-import remarkGfm from 'remark-gfm';
 import ReactMarkdown, { Components } from 'react-markdown';
-import ImageNode from '@/lib/markdown/ImageNode';
+import remarkGfm from 'remark-gfm';
 import CodeBlock from '@/lib/markdown/CodeBlock';
+import ImageNode from '@/lib/markdown/ImageNode';
 
 interface MarkdownProps {
   children: string;
