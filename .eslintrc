@@ -1,4 +1,14 @@
 {
   "extends": "next/core-web-vitals",
-  "root": true
+  "root": true,
+  "rules": {
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "import/order": ["error", { "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index"], "alphabetize": { "order": "asc" } }],
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import { Github, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/button/Button';
 import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
