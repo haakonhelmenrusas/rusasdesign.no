@@ -2,7 +2,6 @@
 
 import { X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Badge } from '@/components/badge/Badge';
 import BlogCard from '@/components/blogCard/BlogCard';
 import { Button } from '@/components/button/Button';
 import { useFilter } from '@/context/FilterContext';
@@ -31,29 +30,34 @@ export default function FilterablePosts({ posts }: Props) {
       <div className="large-spacing">
         <div className="mb-6 md:mb-8">
           <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-foreground">Les etter tema</h3>
-          <div className="flex flex-wrap gap-2 md:gap-4">
+          <div className="flex flex-wrap gap-2 md:gap-4" role="group" aria-label="Filter posts by topic">
             {allTags.map((tag) => (
-              <Badge
+              <button
                 key={tag}
-                variant={selectedTag === tag ? 'default' : 'secondary'}
+                onClick={() => toggleTag(tag)}
+                aria-pressed={selectedTag === tag}
                 className={`px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-bold cursor-pointer 
-                            transition-all duration-300 hover:scale-105 md:hover:scale-110 border-2
+                            transition-all duration-300 hover:scale-105 md:hover:scale-110 border-2 rounded-md
+                            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary
                             ${
                   selectedTag === tag
                     ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25'
-                    : 'hover:bg-accent hover:text-accent-foreground hover:border-accent'
+                    : 'bg-secondary text-secondary-foreground border-transparent hover:bg-accent hover:text-accent-foreground hover:border-accent'
                 }`}
-                onClick={() => toggleTag(tag)}
               >
                 {tag}
-              </Badge>
+              </button>
             ))}
           </div>
         </div>
 
         {selectedTag && (
           <div
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-xl border-2 border-border">
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4 p-4 md:p-6 bg-muted/50 rounded-xl border-2 border-border"
+            role="status"
+            aria-live="polite"
+            aria-label={`Posts filtered by ${selectedTag}`}
+          >
             <span className="text-base md:text-lg font-bold text-foreground">
               Filtrert på: <span className="text-primary">{selectedTag}</span>
             </span>
@@ -62,8 +66,9 @@ export default function FilterablePosts({ posts }: Props) {
               size="sm"
               onClick={clear}
               className="hover:bg-destructive hover:text-destructive-foreground font-bold text-sm md:text-base"
+              aria-label={`Remove ${selectedTag} filter`}
             >
-              <X className="w-4 h-4 mr-2" />
+              <X className="w-4 h-4 mr-2" aria-hidden="true" />
               Fjern filter
             </Button>
           </div>
@@ -92,6 +97,7 @@ export default function FilterablePosts({ posts }: Props) {
             onClick={clear}
             size="lg"
             className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto"
+            aria-label="Remove filter and show all posts"
           >
             Fjern filter og vis alle innlegg
           </Button>

@@ -23,32 +23,34 @@ export default async function BlogPost({ params }) {
         <Link
           href="/"
           className="mb-4 md:mb-6 hover:-translate-x-2 rounded-2xl inline-flex items-center w-fit transition-all duration-300 font-bold text-base md:text-lg px-4 md:px-6 py-2 md:py-3
-                    hover:bg-primary hover:text-primary-foreground"
+                    hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          aria-label="Back to home"
         >
-          <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" />
+          <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
           Tilbake
         </Link>
 
         <div className="flex items-center gap-3 md:gap-4 text-muted-foreground mb-4 md:mb-6 text-base md:text-lg">
-          <Calendar className="w-5 h-5 md:w-6 md:h-6" />
+          <Calendar className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
           <span className="font-bold">{format(new Date(post.data.created_at), 'd LLLL, yyyy', { locale: nb })}</span>
         </div>
 
         <h1 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight tracking-tight
-                       bg-gradient-to-r from-primary via-accent to-destructive
+                       bg-linear-to-r from-primary via-accent to-destructive
                        bg-clip-text text-transparent">
           {post.data.title}
         </h1>
 
-        <div className="flex flex-wrap gap-2 md:gap-4">
+        <div className="flex flex-wrap gap-2 md:gap-4" role="list">
           {post.data.tags.map((tag: string) => (
-            <Badge
-              key={tag}
-              variant="secondary"
-              className="px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-bold border-2 border-border"
-            >
-              {tag}
-            </Badge>
+            <div key={tag} role="listitem">
+              <Badge
+                variant="secondary"
+                className="px-3 md:px-6 py-2 md:py-3 text-sm md:text-base font-bold border-2 border-border"
+              >
+                {tag}
+              </Badge>
+            </div>
           ))}
         </div>
       </div>

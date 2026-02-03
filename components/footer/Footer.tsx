@@ -5,7 +5,7 @@ import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
 
 export default function Footer() {
   return (
-    <footer className="border-t-4 border-primary bg-gradient-to-r from-card to-muted/20 mt-16 md:mt-32">
+    <footer className="border-t-4 border-primary bg-linear-to-r from-card to-muted/20 mt-16 md:mt-32">
       <div className="container max-w-7xl mx-auto py-8 md:py-16 px-4 md:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12 md:items-center">
           <div
@@ -38,8 +38,9 @@ export default function Footer() {
                 href="https://github.com/haakonhelmenrusas"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile (opens in new window)"
               >
-                <Github className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" />
+                <Github className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
                 GitHub
               </a>
             </Button>
@@ -55,8 +56,9 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/haakon-helmen-rusas/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile (opens in new window)"
               >
-                <Linkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" />
+                <Linkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
                 LinkedIn
               </a>
             </Button>

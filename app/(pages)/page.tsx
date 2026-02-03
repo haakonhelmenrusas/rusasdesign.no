@@ -9,6 +9,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Skip to content link for keyboard navigation */}
+      <a
+        href="#blog-section"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-2 focus:outline-offset-2"
+      >
+        Skip to blog content
+      </a>
+
       <header className="container max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8">
         <div className="text-center mega-spacing">
           <div className="mb-8 md:mb-12 flex justify-center">
@@ -17,7 +25,7 @@ export default function Home() {
             >
               <Image
                 src="/assets/logo.png"
-                alt="Rusås Design"
+                alt="Rusås Design - Creative web developer logo"
                 fill
                 className="object-contain hover:rotate-12 transition-transform duration-500"
                 priority
@@ -37,15 +45,15 @@ export default function Home() {
         </div>
       </header>
       <main className="container max-w-7xl mx-auto px-4 md:px-8 pb-12 md:pb-20">
-        <div className="huge-spacing">
+        <section id="blog-section" className="huge-spacing">
           <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-            <Pen className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+            <Pen className="w-6 h-6 md:w-8 md:h-8 text-accent" aria-hidden="true" />
             <h2 className="section-title">Blogg</h2>
           </div>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Deler tanker om design, kode og produktivitet.
           </p>
-        </div>
+        </section>
         <FilterProvider>
           <FilterablePosts posts={allBlogPosts} />
         </FilterProvider>

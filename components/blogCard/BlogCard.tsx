@@ -14,6 +14,7 @@ interface BlogCardProps {
 
 export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogCardProps) {
   const router = useRouter();
+  const cardRef = React.useRef<HTMLDivElement>(null);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('no-nb', {
@@ -28,18 +29,35 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
     onTagClick?.(tag);
   };
 
+  const handleCardClick = () => {
+    router.push(`/blogg/${post.data.slug}`);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleCardClick();
+    }
+  };
+
   const staggerClass = `stagger-${Math.min(animationDelay + 1, 6)}`;
 
   return (
     <div
+      ref={cardRef}
+      role="article"
       className={`relative bg-card border-2 border-border rounded-xl p-8 cursor-pointer 
                  transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 hover:scale-105 
                  hover:border-primary group opacity-0 fade-in-grid ${staggerClass}
-                 transform-gpu will-change-transform overflow-hidden`}
-      onClick={() => router.push(`/blogg/${post.data.slug}`)}
+                 transform-gpu will-change-transform overflow-hidden
+                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary`}
+      onClick={handleCardClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      aria-label={`Blog post: ${post.data.title}`}
     >
       <div className="flex items-center gap-3 text-foreground/80 mb-4 text-lg">
-        <Calendar className="w-5 h-5" />
+        <Calendar className="w-5 h-5" aria-hidden="true" />
         <span className="font-medium">{formatDate(post.data.created_at)}</span>
       </div>
       <h3 className="text-2xl font-black mb-6 leading-tight group-hover:text-primary
@@ -65,7 +83,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
           </Badge>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-destructive
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-linear-to-r from-primary via-accent to-destructive
                       transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
                       rounded-b-xl" />
     </div>

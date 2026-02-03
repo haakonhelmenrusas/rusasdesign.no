@@ -39,15 +39,16 @@ export const ThemeToggle = () => {
       size="sm"
       onClick={toggleTheme}
       className="hover:scale-110 transition-all duration-200 hover:bg-accent"
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
     >
       {isDark ? (
         <>
-          <Sun className="w-4 h-4 mr-2" />
+          <Sun className="w-4 h-4 mr-2" aria-hidden="true" />
           Light
         </>
       ) : (
         <>
-          <Moon className="w-4 h-4 mr-2" />
+          <Moon className="w-4 h-4 mr-2" aria-hidden="true" />
           Dark
         </>
       )}
