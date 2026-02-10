@@ -56,7 +56,7 @@ Vi kobler en `<label>` til en `<input>` ved å gi input-feltet en unik `id`, og 
 - **`type="email"`:** Et felt spesielt for e-post. Nettleseren kan selv sjekke om det ser ut som en gyldig e-postadresse. Smart, ikke sant?
 - **`required`:** Dette betyr at feltet *må* fylles ut.
 
-### Plass til spørsmål: `<textarea>`
+### Plass til spørsmål
 
 For lengre meldinger er `<textarea>` perfekt. Siden dette feltet ikke er kritisk for oss, markerer vi det som valgfritt i ledeteksten.
 
