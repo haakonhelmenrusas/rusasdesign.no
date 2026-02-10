@@ -1,6 +1,6 @@
 ---
 id: 008
-title: "Bygg et Tilgjengelig Kontaktskjema med HTML og CSS"
+title: "Bygg et tilgjengelig skjema med HTML og CSS"
 created_at: "2026-02-10"
 description: "Lær hvordan du bygger et enkelt og tilgjengelig kontaktskjema fra bunnen av med bare HTML og CSS."
 slug: "html-form"

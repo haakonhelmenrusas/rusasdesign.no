@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-end gap-4 order-2 md:order-3">
             <ThemeToggle />
             <p className="text-muted-foreground font-medium text-center md:text-right text-sm md:text-base">
-              © 2025 Rusås Design
+              © 2026 Rusås Design
             </p>
           </div>
         </div>
