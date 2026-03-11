@@ -71,6 +71,17 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <p className="mt-2 text-[var(--white-30)]">
+        This site is powered by{' '}
+        <a
+          href="https://www.netlify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--white-80)] underline transition-[color,transform] duration-[150ms] ease-[ease] hover:text-[var(--white)] hover:scale-[1.05]"
+        >
+          Netlify
+        </a>
+      </p>
     </footer>
   );
 }
