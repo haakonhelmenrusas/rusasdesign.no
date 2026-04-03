@@ -1,8 +1,8 @@
 'use client';
 
-import { Calendar } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { FaCalendar } from 'react-icons/fa';
 import { Badge } from '@/components/badge/Badge';
 import { Post } from '@/types/Post';
 
@@ -10,7 +10,7 @@ interface BlogCardProps {
   post: Post;
   onTagClick?: (tag: string) => void;
   animationDelay?: number;
-}
+} 
 
 export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogCardProps) {
   const router = useRouter();
@@ -57,9 +57,9 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
       aria-label={`Blog post: ${post.data.title}`}
     >
       <div className="flex items-center gap-3 text-foreground/80 mb-4 text-lg">
-        <Calendar className="w-5 h-5" aria-hidden="true" />
-        <span className="font-medium">{formatDate(post.data.created_at)}</span>
-      </div>
+         <FaCalendar className="w-5 h-5" aria-hidden="true" />
+         <span className="font-medium">{formatDate(post.data.created_at)}</span>
+       </div>
       <h3 className="text-2xl font-black mb-6 leading-tight group-hover:text-primary
                      transition-colors duration-300 tracking-tight">
         {post.data.title}

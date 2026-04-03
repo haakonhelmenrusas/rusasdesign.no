@@ -1,6 +1,6 @@
 'use client';
-import { Moon, Sun } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { Button } from '@/components/button/Button';
 
 export const ThemeToggle = () => {
@@ -41,17 +41,17 @@ export const ThemeToggle = () => {
       className="hover:scale-110 transition-all duration-200 hover:bg-accent"
       aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
     >
-      {isDark ? (
-        <>
-          <Sun className="w-4 h-4 mr-2" aria-hidden="true" />
-          Light
-        </>
-      ) : (
-        <>
-          <Moon className="w-4 h-4 mr-2" aria-hidden="true" />
-          Dark
-        </>
-      )}
+       {isDark ? (
+         <>
+           <FaSun className="w-4 h-4 mr-2" aria-hidden="true" />
+           Light
+         </>
+       ) : (
+         <>
+           <FaMoon className="w-4 h-4 mr-2" aria-hidden="true" />
+           Dark
+         </>
+       )}
     </Button>
   );
 };

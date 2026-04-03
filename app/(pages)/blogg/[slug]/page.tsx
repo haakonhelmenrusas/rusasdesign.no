@@ -1,8 +1,9 @@
 import { format } from 'date-fns';
 import { nb } from 'date-fns/locale/nb';
-import { ArrowLeft, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { FaCalendar } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa6';
 import { Badge } from '@/components/badge/Badge';
 import Markdown from '@/components/markdown/Markdown';
 import RelatedPosts from '@/components/relatedPosts/RelatedPosts';
@@ -16,7 +17,7 @@ export default async function BlogPost({ params }) {
   if (!post) {
     return notFound();
   }
-
+ 
   return (
     <article className="container max-w-4xl mx-auto px-4 md:px-8">
       <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-2xl large-spacing">
@@ -26,14 +27,14 @@ export default async function BlogPost({ params }) {
                     hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-label="Back to home"
         >
-          <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
-          Tilbake
+           <FaArrowLeft className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
+           Tilbake
         </Link>
 
         <div className="flex items-center gap-3 md:gap-4 text-muted-foreground mb-4 md:mb-6 text-base md:text-lg">
-          <Calendar className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
-          <span className="font-bold">{format(new Date(post.data.created_at), 'd LLLL, yyyy', { locale: nb })}</span>
-        </div>
+           <FaCalendar className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
+           <span className="font-bold">{format(new Date(post.data.created_at), 'd LLLL, yyyy', { locale: nb })}</span>
+         </div>
 
         <h1 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 leading-tight tracking-tight
                        bg-linear-to-r from-primary via-accent to-destructive

@@ -1,7 +1,7 @@
 'use client';
 
-import { X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { FaTimes } from 'react-icons/fa';
 import BlogCard from '@/components/blogCard/BlogCard';
 import { Button } from '@/components/button/Button';
 import { useFilter } from '@/context/FilterContext';
@@ -67,9 +67,9 @@ export default function FilterablePosts({ posts }: Props) {
               onClick={clear}
               className="hover:bg-destructive hover:text-destructive-foreground font-bold text-sm md:text-base"
               aria-label={`Remove ${selectedTag} filter`}
-            >
-              <X className="w-4 h-4 mr-2" aria-hidden="true" />
-              Fjern filter
+             >
+               <FaTimes className="w-4 h-4 mr-2" aria-hidden="true" />
+               Fjern filter
             </Button>
           </div>
         )}

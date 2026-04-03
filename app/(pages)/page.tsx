@@ -1,11 +1,11 @@
-import { Pen } from 'lucide-react';
 import Image from 'next/image';
+import { FaPen } from 'react-icons/fa';
 import FilterablePosts from '@/components/filterablePosts/FilterablePosts';
 import { FilterProvider } from '@/context/FilterContext';
 import { getPosts } from '@/lib/posts';
 
 export default function Home() {
-  const allBlogPosts = getPosts();
+  const allBlogPosts = getPosts(); 
 
   return (
     <div className="min-h-screen bg-background">
@@ -47,9 +47,9 @@ export default function Home() {
       <main className="container max-w-7xl mx-auto px-4 md:px-8 pb-12 md:pb-20">
         <section id="blog-section" className="huge-spacing">
           <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-            <Pen className="w-6 h-6 md:w-8 md:h-8 text-accent" aria-hidden="true" />
-            <h2 className="section-title">Blogg</h2>
-          </div>
+             <FaPen className="w-6 h-6 md:w-8 md:h-8 text-accent" aria-hidden="true" />
+             <h2 className="section-title">Blogg</h2>
+           </div>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Deler tanker om design, kode og produktivitet.
           </p>

@@ -1,5 +1,5 @@
-import { Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Button } from '@/components/button/Button';
 import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
 
@@ -40,7 +40,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Visit my GitHub profile (opens in new window)"
               >
-                <Github className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
+                <FaGithub className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
                 GitHub
               </a>
             </Button>
@@ -58,7 +58,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label="Visit my LinkedIn profile (opens in new window)"
               >
-                <Linkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
+                <FaLinkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
                 LinkedIn
               </a>
             </Button>
