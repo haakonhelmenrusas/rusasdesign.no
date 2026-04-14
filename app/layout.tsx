@@ -2,6 +2,7 @@ import './globals.css';
 
 import type { Metadata, Viewport } from 'next';
 import { Noto_Sans, Oswald } from 'next/font/google';
+import Script from 'next/script';
 import { ReactNode } from 'react';
 import { ClarityInit } from '@/lib/ClarityInit';
 
@@ -53,10 +54,13 @@ const notoSans = Noto_Sans({
 
 export default async function RootLayout({ children }: { children: ReactNode; }) {
   return (
-    <html lang="nb-NO" className={`${oswald.variable} ${notoSans.variable}`}>
+    <html lang="nb-NO" className={`${oswald.variable} ${notoSans.variable}`} suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
         <title>Rusås Design</title>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function(){var t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||(!t&&d))document.documentElement.classList.add('dark');})();`}
+        </Script>
       </head>
       <body className="antialiased min-h-screen flex flex-col">
         <ClarityInit />

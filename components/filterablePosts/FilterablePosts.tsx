@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import BlogCard from '@/components/blogCard/BlogCard';
 import { Button } from '@/components/button/Button';
@@ -12,7 +11,6 @@ type Props = {
 };
 
 export default function FilterablePosts({ posts }: Props) {
-  const [mounted, setMounted] = useState(false);
   const { selectedTag, toggleTag, clear } = useFilter();
 
   const filteredPosts = selectedTag
@@ -21,9 +19,6 @@ export default function FilterablePosts({ posts }: Props) {
 
   const allTags = Array.from(new Set(posts.flatMap((post) => post.data.tags)));
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <>
@@ -76,8 +71,7 @@ export default function FilterablePosts({ posts }: Props) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10">
-        {mounted &&
-          filteredPosts.map((post, index) => (
+        {filteredPosts.map((post, index) => (
             <BlogCard
               key={post.data.id}
               post={post}
