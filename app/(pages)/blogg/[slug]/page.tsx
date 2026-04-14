@@ -20,10 +20,10 @@ export default async function BlogPost({ params }) {
  
   return (
     <article className="container max-w-4xl mx-auto px-4 md:px-8">
-      <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-2xl large-spacing">
+      <div className="bg-card border-2 border-border rounded-md p-4 md:p-8 shadow-2xl large-spacing">
         <Link
           href="/"
-          className="mb-4 md:mb-6 hover:-translate-x-2 rounded-2xl inline-flex items-center w-fit transition-all duration-300 font-bold text-base md:text-lg px-4 md:px-6 py-2 md:py-3
+          className="mb-4 md:mb-6 hover:-translate-x-2 rounded-sm inline-flex items-center w-fit transition-all duration-300 font-bold text-base md:text-lg px-4 md:px-6 py-2 md:py-3
                     hover:bg-primary hover:text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-label="Back to home"
         >
@@ -55,7 +55,7 @@ export default async function BlogPost({ params }) {
           ))}
         </div>
       </div>
-      <div className="bg-card border-2 border-border rounded-xl p-4 md:p-8 shadow-xl large-spacing">
+      <div className="bg-card border-2 border-border rounded-md p-4 md:p-8 shadow-xl large-spacing">
         <div className="prose prose-gray max-w-none">
           <Markdown>{post.content}</Markdown>
         </div>

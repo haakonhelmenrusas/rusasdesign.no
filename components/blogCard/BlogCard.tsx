@@ -46,7 +46,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
     <div
       ref={cardRef}
       role="article"
-      className={`relative bg-card border-2 border-border rounded-xl p-8 cursor-pointer 
+      className={`relative bg-card border-2 border-border rounded-md p-8 cursor-pointer 
                  transition-all duration-500 hover:shadow-2xl hover:-translate-y-4 hover:scale-105 
                  hover:border-primary group opacity-0 fade-in-grid ${staggerClass}
                  transform-gpu will-change-transform overflow-hidden
@@ -85,7 +85,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
       </div>
       <div className="absolute bottom-0 left-0 w-full h-2 bg-linear-to-r from-primary via-accent to-destructive
                       transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
-                      rounded-b-xl" />
+                      rounded-b-md" />
     </div>
   );
 };
