@@ -1,28 +1,33 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { Button } from '@/components/button/Button';
 
+function getThemeSnapshot() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return savedTheme === 'dark' || (!savedTheme && prefersDark);
+}
+
+function subscribeToTheme(callback: () => void) {
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  mq.addEventListener('change', callback);
+  window.addEventListener('storage', callback);
+  return () => {
+    mq.removeEventListener('change', callback);
+    window.removeEventListener('storage', callback);
+  };
+}
+
 export const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useSyncExternalStore(
+    subscribeToTheme,
+    getThemeSnapshot,
+    () => false,
+  );
 
-  useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     const newTheme = !isDark;
-    setIsDark(newTheme);
 
     if (newTheme) {
       document.documentElement.classList.add('dark');
@@ -31,7 +36,10 @@ export const ThemeToggle = () => {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-  };
+
+    // Notify subscribers
+    window.dispatchEvent(new Event('storage'));
+  }, [isDark]);
 
   return (
     <Button
@@ -55,3 +63,6 @@ export const ThemeToggle = () => {
     </Button>
   );
 };
+
+
+
