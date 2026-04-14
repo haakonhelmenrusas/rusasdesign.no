@@ -53,7 +53,7 @@ export default function Home() {
           <section id="projects-section" className="huge-spacing">
             <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
               <FaBriefcase className="w-6 h-6 md:w-8 md:h-8 text-accent" aria-hidden="true" />
-              <h2 className="section-title">Prosjekter</h2>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Prosjekter</h2>
             </div>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8 md:mb-12">
               Et utvalg prosjekter jeg har jobbet med.
@@ -68,9 +68,9 @@ export default function Home() {
 
         {/* Blog section */}
         <section id="blog-section" className="huge-spacing">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+            <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
              <FaPen className="w-6 h-6 md:w-8 md:h-8 text-accent" aria-hidden="true" />
-             <h2 className="section-title">Blogg</h2>
+             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Blogg</h2>
            </div>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Deler tanker om design, kode og produktivitet.
