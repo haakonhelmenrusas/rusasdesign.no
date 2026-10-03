@@ -71,14 +71,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="mt-4 text-center text-sm text-muted-foreground">
-        Vert av{' '}
+      <p className="mt-8 text-center text-sm text-muted-foreground">
+        This site is powered by{' '}
         <a
           href="https://www.netlify.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary hover:text-accent transition-colors duration-200 underline font-medium"
-          aria-label="Netlify (åpnes i nytt vindu)"
         >
           Netlify
         </a>
