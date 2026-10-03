@@ -16,7 +16,7 @@ export default function AboutMe() {
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-lg md:rounded-xl bg-muted overflow-hidden shadow-lg">
               <Image
                 src="/assets/logo.png"
-                alt="Håkon Helmen Rùsås"
+                alt="Håkon Helmen Rusås"
                 width={200}
                 height={200}
                 className="w-full h-full object-cover"
@@ -25,7 +25,7 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="md:col-span-2">
-            <h3 className="text-2xl md:text-3xl font-black mb-4 tracking-tight">Håkon Helmen Rùsàs</h3>
+            <h3 className="text-2xl md:text-3xl font-black mb-4 tracking-tight">Håkon Helmen Rusås</h3>
             <p className="text-lg text-muted-foreground mb-4">
               Kreativ utvikler og designer
             </p>

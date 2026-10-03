@@ -1,5 +1,6 @@
 import AboutMe from '@/components/aboutMe/AboutMe';
 import BlogSection from '@/components/blogSection/BlogSection';
+import ContactMe from '@/components/contactMe/ContactMe';
 import Hero from '@/components/hero/Hero';
 import ProjectsSection from '@/components/projectsSection/ProjectsSection';
 import { getPosts } from '@/lib/posts';
@@ -25,6 +26,8 @@ export default function Home() {
         <BlogSection posts={allBlogPosts} />
 
         <AboutMe />
+
+        <ContactMe />
       </main>
     </div>
   );
