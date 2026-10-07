@@ -40,12 +40,12 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-6 md:p-8">
-        <h3 className="text-xl md:text-2xl font-black mb-3 leading-tight tracking-tight">
+      <div className="flex flex-col flex-1 p-3 md:p-5">
+        <h3 className="text-base md:text-lg font-black mb-2 leading-tight tracking-tight">
           {project.title}
         </h3>
 
-        <p className="text-foreground/75 leading-relaxed text-sm md:text-base font-medium flex-1 mb-6">
+        <p className="text-foreground/75 leading-relaxed text-sm font-medium flex-1 mb-3">
           {project.description}
         </p>
 

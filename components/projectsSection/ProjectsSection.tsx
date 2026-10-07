@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8 md:mb-12">
         Et utvalg prosjekter jeg har jobbet med.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} animationDelay={index} />
         ))}
