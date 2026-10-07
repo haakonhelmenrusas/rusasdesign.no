@@ -15,7 +15,7 @@ export default function AboutMe() {
           <div className="flex justify-center md:justify-start">
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-lg md:rounded-xl bg-muted overflow-hidden shadow-lg">
               <Image
-                src="/assets/logo.png"
+                src="/assets/haakon.jpg"
                 alt="Haakon Helmen Rusås"
                 width={200}
                 height={200}
