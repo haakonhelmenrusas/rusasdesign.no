@@ -1,6 +1,6 @@
 'use client';
 
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import { Button } from '@/components/button/Button';
 
 export default function ContactMe() {
@@ -20,43 +20,11 @@ export default function ContactMe() {
           asChild
         >
           <a
-            href="mailto:kontakt@rusasdesign.no"
+            href="mailto:haakon.rusas@pm.me"
             aria-label="Send meg en e-post"
           >
             <FaEnvelope className="w-5 h-5 mr-2" aria-hidden="true" />
             E-post
-          </a>
-        </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          className="hover:bg-accent hover:text-accent-foreground hover:border-accent dark:hover:bg-accent/20 transition-all duration-200"
-          asChild
-        >
-          <a
-            href="https://github.com/haakonhelmenrusas"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub (åpnes i nytt vindu)"
-          >
-            <FaGithub className="w-5 h-5 mr-2" aria-hidden="true" />
-            GitHub
-          </a>
-        </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          className="hover:bg-accent hover:text-accent-foreground hover:border-accent dark:hover:bg-accent/20 transition-all duration-200"
-          asChild
-        >
-          <a
-            href="https://www.linkedin.com/in/haakon-helmen-rusas/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn (åpnes i nytt vindu)"
-          >
-            <FaLinkedin className="w-5 h-5 mr-2" aria-hidden="true" />
-            LinkedIn
           </a>
         </Button>
       </div>
