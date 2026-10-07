@@ -13,43 +13,35 @@ code::after {
 	content: none;
 }
 
-html {
-	font-family: var(--font-noto-sans), serif;
-}
-
-h1 {
-	font-family: var(--font-oswald), serif;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
 	--font-size: 16px;
-	--background: #f7f3eb;
-	--foreground: #1f1d33;
+	--background: #fdfcfb;
+	--foreground: #1c1c1c;
 	--card: #ffffff;
-	--card-foreground: #1f1d33;
+	--card-foreground: #1c1c1c;
 	--popover: #ffffff;
-	--popover-foreground: #1f1d33;
-	--primary: #a87820;
+	--popover-foreground: #1c1c1c;
+	--primary: #d4a843;
 	--primary-foreground: #ffffff;
-	--secondary: #7a5c1a;
+	--secondary: #a88c3a;
 	--secondary-foreground: #ffffff;
-	--muted: #ede8dc;
-	--muted-foreground: #6b6050;
-	--accent: #c8952a;
-	--accent-foreground: #ffffff;
+	--muted: #f3f3f3;
+	--muted-foreground: #555555;
+	--accent: #e8c468;
+	--accent-foreground: #1c1c1c;
 	--destructive: #c0392b;
 	--destructive-foreground: #ffffff;
-	--border: rgba(31, 29, 51, 0.12);
+	--border: rgba(28, 28, 28, 0.1);
 	--input: transparent;
-	--input-background: #f0ece2;
-	--switch-background: #c8b89a;
+	--input-background: #f9f9f9;
+	--switch-background: #d4a843;
 	--font-weight-black: 900;
 	--font-weight-bold: 700;
 	--font-weight-medium: 500;
 	--font-weight-normal: 400;
-	--ring: #a87820;
+	--ring: #d4a843;
 	--radius: 0.25rem;
 
 	/* Code block theme colors */
@@ -69,19 +61,19 @@ h1 {
 	--card-foreground: #f0ece0;
 	--popover: #2a2740;
 	--popover-foreground: #f0ece0;
-	--primary: #d4a843;
+	--primary: #e8c468;
 	--primary-foreground: #1f1d33;
 	--secondary: #362f52;
 	--secondary-foreground: #f0ece0;
 	--muted: #312e4a;
 	--muted-foreground: #a89880;
-	--accent: #e8c468;
+	--accent: #d4a843;
 	--accent-foreground: #1f1d33;
 	--destructive: #c0392b;
 	--destructive-foreground: #ffffff;
 	--border: rgba(240, 236, 224, 0.1);
 	--input: #312e4a;
-	--ring: #d4a843;
+	--ring: #e8c468;
 	--font-weight-black: 900;
 	--font-weight-bold: 700;
 	--font-weight-medium: 500;
@@ -133,104 +125,6 @@ h1 {
 
 	body {
 		@apply bg-background text-foreground;
-	}
-}
-
-/**
- * Base typography with bold, modern styling and mobile responsiveness
- */
-@layer base {
-	:where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
-		h1 {
-			font-size: 2.5rem;
-			font-weight: var(--font-weight-black);
-			line-height: 1.2;
-			letter-spacing: -0.02em;
-
-			@media (min-width: 768px) {
-				font-size: 3.5rem;
-				line-height: 1.1;
-			}
-
-			@media (min-width: 1024px) {
-				font-size: 4.5rem;
-			}
-		}
-
-		h2 {
-			font-size: 2rem;
-			font-weight: var(--font-weight-bold);
-			line-height: 1.3;
-			letter-spacing: -0.01em;
-
-			@media (min-width: 768px) {
-				font-size: 2.5rem;
-				line-height: 1.2;
-			}
-
-			@media (min-width: 1024px) {
-				font-size: 3rem;
-			}
-		}
-
-		h3 {
-			font-size: 1.5rem;
-			font-weight: var(--font-weight-bold);
-			line-height: 1.4;
-
-			@media (min-width: 768px) {
-				font-size: 1.75rem;
-				line-height: 1.3;
-			}
-
-			@media (min-width: 1024px) {
-				font-size: 2rem;
-			}
-		}
-
-		h4 {
-			font-size: 1.25rem;
-			font-weight: var(--font-weight-bold);
-			line-height: 1.5;
-
-			@media (min-width: 768px) {
-				font-size: 1.375rem;
-				line-height: 1.4;
-			}
-
-			@media (min-width: 1024px) {
-				font-size: 1.5rem;
-			}
-		}
-
-		p {
-			font-size: 1rem;
-			font-weight: var(--font-weight-normal);
-			line-height: 1.6;
-
-			@media (min-width: 768px) {
-				font-size: 1.125rem;
-				line-height: 1.7;
-			}
-		}
-
-		label {
-			font-size: var(--text-base);
-			font-weight: var(--font-weight-medium);
-			line-height: 1.5;
-		}
-
-		button {
-			font-size: var(--text-base);
-			font-weight: var(--font-weight-medium);
-			line-height: 1.5;
-		}
-
-		input {
-			font-size: var(--text-base);
-			font-weight: var(--font-weight-normal);
-			line-height: 1.5;
-		}
 	}
 }
 
@@ -298,25 +192,6 @@ html {
 		}
 	}
 
-	.section-title {
-		font-size: 2rem;
-		font-weight: var(--font-weight-black);
-		line-height: 1.2;
-		letter-spacing: -0.01em;
-
-		@media (min-width: 640px) {
-			font-size: 2.75rem;
-			line-height: 1.15;
-			letter-spacing: -0.015em;
-		}
-
-		@media (min-width: 1024px) {
-			font-size: 3.5rem;
-			line-height: 1.1;
-			letter-spacing: -0.02em;
-		}
-	}
-
 	/* Mobile-first spacing */
 	.mega-spacing {
 		margin-bottom: 3rem;
@@ -371,14 +246,6 @@ html {
 
 		@media (min-width: 768px) {
 			margin-bottom: 2rem;
-		}
-	}
-
-	.post-spacing {
-		margin-bottom: 1rem;
-
-		@media (min-width: 768px) {
-			margin-bottom: 1.5rem;
 		}
 	}
 }

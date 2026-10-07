@@ -15,8 +15,7 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
   return (
     <article
       className={`relative flex flex-col bg-card border-2 border-border rounded-md overflow-hidden
-                  transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]
-                  hover:border-primary group opacity-0 fade-in-grid ${staggerClass}
+                  opacity-0 fade-in-grid ${staggerClass}
                   transform-gpu will-change-transform`}
     >
       {/* Image */}
@@ -27,7 +26,7 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
             alt={project.title}
             fill
             loading="eager"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
         ) : (
@@ -38,20 +37,15 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
             </span>
           </div>
         )}
-
-        {/* Overlay gradient on hover */}
-        <div className="absolute inset-0 bg-linear-to-t from-card/60 to-transparent
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-6 md:p-8">
-        <h3 className="text-xl md:text-2xl font-black mb-3 leading-tight
-                       group-hover:text-primary transition-colors duration-300 tracking-tight">
+      <div className="flex flex-col flex-1 p-3 md:p-5">
+        <h3 className="text-base md:text-lg font-black mb-2 leading-tight tracking-tight">
           {project.title}
         </h3>
 
-        <p className="text-foreground/75 leading-relaxed text-sm md:text-base font-medium flex-1 mb-6">
+        <p className="text-foreground/75 leading-relaxed text-sm font-medium flex-1 mb-3">
           {project.description}
         </p>
 
@@ -76,11 +70,11 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
             asChild
             variant="outline"
             size="sm"
-            className="self-start group/btn hover:bg-primary hover:text-primary-foreground hover:border-primary dark:hover:bg-primary/20 dark:hover:text-primary dark:hover:border-primary"
+            className="self-start hover:bg-primary hover:text-primary-foreground hover:border-primary dark:hover:bg-primary/20 dark:hover:text-primary dark:hover:border-primary"
           >
             <a href={project.url} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkAlt
-                className="w-3 h-3 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                className="w-3 h-3"
                 aria-hidden="true"
               />
               Besøk prosjekt
@@ -88,10 +82,6 @@ export default function ProjectCard({ project, animationDelay = 0 }: ProjectCard
           </Button>
         )}
       </div>
-
-      {/* Accent bar */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-primary via-accent to-destructive
-                      transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
     </article>
   );
 }

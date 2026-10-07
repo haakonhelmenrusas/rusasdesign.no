@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { Button } from '@/components/button/Button';
 import { ThemeToggle } from '@/components/themeToggle/ThemeToggle';
 
@@ -44,24 +44,6 @@ export default function Footer() {
                 GitHub
               </a>
             </Button>
-            <Button
-              variant="ghost"
-              size="default"
-              className="hover:scale-105 md:hover:scale-110 transition-all duration-300 hover:bg-accent
-                      hover:text-accent-foreground font-bold border-2 border-transparent
-                      hover:border-accent text-sm md:text-lg px-4 md:px-6 py-2 md:py-3 w-full sm:w-auto"
-              asChild
-            >
-              <a
-                href="https://www.linkedin.com/in/haakon-helmen-rusas/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit my LinkedIn profile (opens in new window)"
-              >
-                <FaLinkedin className="w-4 h-4 md:w-6 md:h-6 mr-2 md:mr-3" aria-hidden="true" />
-                LinkedIn
-              </a>
-            </Button>
           </div>
           <div className="flex flex-col items-center md:items-end gap-4 order-2 md:order-3">
             <ThemeToggle />
@@ -71,13 +53,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="mt-2 text-[var(--white-30)]">
+      <p className="mt-8 text-center text-sm text-muted-foreground">
         This site is powered by{' '}
         <a
           href="https://www.netlify.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--white-80)] underline transition-[color,transform] duration-[150ms] ease-[ease] hover:text-[var(--white)] hover:scale-[1.05]"
+          className="text-primary hover:text-accent transition-colors duration-200 underline font-medium"
         >
           Netlify
         </a>

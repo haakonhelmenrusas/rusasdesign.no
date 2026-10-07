@@ -83,7 +83,7 @@ export default function BlogCard({ post, onTagClick, animationDelay = 0 }: BlogC
           </Badge>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-linear-to-r from-primary via-accent to-destructive
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-primary
                       transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left
                       rounded-b-md" />
     </div>
